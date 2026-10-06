@@ -1,0 +1,12 @@
+// Overrides of Bootstrap's Sass variables.
+//
+// Just declare the variable. Bootstrap's own defaults are marked `!default`,
+// so anything set here wins. See node_modules/bootstrap/scss/_variables.scss
+// for the full list of names you can override.
+
+// There are around 1500 variables you can override to create your own look!
+// how rounded corners, font, font-sizes, colors, how many cols the grid system uses etc
+
+$primary: #6f42c1;
+$border-radius: 0.5rem;
+$font-family-sans-serif: Verdana, system-ui, sans-serif;

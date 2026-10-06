@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webshop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--HEADER, NAVIGATION AND CART BUTTON-->
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="images/logo.png" class="logo">
+      </a>
+      <label class="cart-button" for="cart-control"><img src="images/cart.png" alt="Varukorg"></label>
+    </div>
+    <div class="header-nav">
+      <nav class="header-content">
+        <a href="#start">Hem</a>
+        <a href="#produkter">Produkter</a>
+        <a href="#om-oss">Om oss</a>
+      </nav>
+    </div>
+    <!-- old cart
+    <details>
+    <summary>Varukorg</summary>
+    <div class="cart-container">
+    <h2>Varukorg</h2>
+    <div class="cart"></div>
+    </div>
+    </details>
+    <div class="clear"></div>
+    -->
+  </header>
+
+  <!--CART PANEL-->
+  <aside>
+    <input type="checkbox" id="cart-control">
+    <div class="cart-background">
+      <label class="cart-background-button" for="cart-control"></label>
+    </div>
+    <div class="cart-container">
+      <h2>Varukorg</h2>
+      <label class="cart-close-button" for="cart-control">
+        <h2>×</h2>
+      </label>
+      <div class="cart"></div>
+      <button type="button" class="cart-checkout-button" onclick="location.href='#kassa'">
+        <!--use label for cart control to uncheck input and close the cart-->
+        <label for="cart-control">Gå till kassan</label>
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!--DEFAULT PAGE-->
+    <article id="start">
+      <div class="content">
+        <h2 class="title">Välkommen till Gurras Webbshop!</h2>
+        <p>Vi är otroligt glada att du har hittat hit. Hos oss kliver du in i ett handplockat och fascinerande utbud där gränserna mellan naturens egna underverk, sprudlande livskraft och hemmets mest effektiva vardagslösningar suddas ut. Vår filosofi är enkel: vi vill erbjuda unika produkter som tillför mervärde, energi, funktion och glädje i varje hörn av ditt liv.</p>
+        <p>Oavsett om du söker efter någonting som förvandlar ditt hem till en livfull oas, ett naturligt energitillskott som håller dig igång under tunga arbetsdagar, eller moderna redskap som gör det tråkiga städarbetet till en ren fröjd, så har vi någonting speciellt anpassat för dig. Vi tror på kvalitet, mångsidighet och framför allt på idén om att varje produkt bär på sin egen unika historia och karaktär.</p>
+        <section>
+          <h3>Handplockade Favoriter för Alla Tillfällen</h3>
+          <p>I vårt noggrant sammansatta sortiment möts det överraskande och det självklara. Här hittar du allt från levande följeslagare som sprider rörelse, charm och ett lugnande sken i din omgivning, till biologiska energikällor och naturliga råvaror som ger både kroppen och matlagningen en välbehövlig boost. Vi erbjuder även ståtliga inslag för grönskande utemiljöer som växer och skapar värde över generationer, sida vid sida med modern och tystgående hushållsteknik som håller ditt hem fläckfritt och fräscht.</p>
+          <p>Gemensamt för allt du finner hos oss är fokuset på kvalitet, funktion och en stark personlighet. Vi tror inte på ett enformigt liv, utan strävar efter att erbjuda produkter som väcker nyfikenhet, underlättar din vardag och förvandlar varje rum eller trädgård till en mer inspirerande plats att vara på.</p>
+          <a href="#produkter">Till produktsidan</a>
+        </section>
+        <section>
+          <h3>Varför Handla Hos Oss?</h3>
+          <p>Vi strävar alltid efter att kombinera funktion, estetik och hållbarhet. När du handlar hos oss kan du vara säker på att du får produkter som noggrant valts ut för att möta höga krav på både prestanda och upplevelse. Vi erbjuder dessutom snabba leveranser, trygg e-handel och en kundtjänst som alltid står redo att hjälpa dig att hitta rätt val för just dina behov.</p>
+          <p>Vi tror inte på ett enformigt liv – vi tror på en färgstark mix av nyfikenhet, funktion och estetik. Ta dig tid att utforska vårt sortiment, läs de detaljerade specifikationerna och låt dig inspireras av produkter som inte liknar något annat du tidigare skådat.</p>
+          <a href="#om-oss">Läs mer om oss här</a>
+        </section>
+        <p><em>Varmt välkommen att starta din upptäcktsfärd hos oss redan idag – vi har någonting unikt för varje tillfälle, rum och miljö!</em></p>
+
+        </section>
+      </div>
+    </article>
+
+    <!--PRODUCTS-->
+    <article id="produkter">
+      <div class="content">
+        <h2 class="title">Produkter</h2>
+        <div class="product-container">
+
+          <a href="#produkter/apa">
+            <section class="product">
+              <img src="images/apa.jpg" alt="">
+              <h3>Apa</h3>
+              <p>1 500 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/banan">
+            <section class="product">
+              <img src="images/banan.png" alt="">
+              <h3>Banan</h3>
+              <p>20 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/citron">
+            <section class="product">
+              <img src="images/citron.jpg" alt="">
+              <h3>Citron</h3>
+              <p>10 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/dammsugare">
+            <section class="product">
+              <img src="images/dammsugare.jpg" alt="">
+              <h3>Dammsugare</h3>
+              <p>900 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/ek">
+            <section class="product">
+              <img src="images/ek.jpg" alt="">
+              <h3>Ek</h3>
+              <p>1 120 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/fisk">
+            <section class="product">
+              <img src="images/fisk.jpg" alt="">
+              <h3>Fisk</h3>
+              <p>300 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/gustav">
+            <section class="product">
+              <img src="images/gustav.jpg" alt="">
+              <h3>Gustav</h3>
+              <p>951106 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/helikopter">
+            <section class="product">
+              <img src="images/helikopter.jpg" alt="">
+              <h3>Helikopter</h3>
+              <p>180 000 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/i">
+            <section class="product">
+              <img src="images/dammsugare.jpg" alt="">
+              <h3>I</h3>
+              <p>300 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/j">
+            <section class="product">
+              <img src="images/ek.jpg" alt="">
+              <h3>J</h3>
+              <p>300 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/k">
+            <section class="product">
+              <img src="images/fisk.jpg" alt="">
+              <h3>K</h3>
+              <p>300 kr</p>
+            </section>
+          </a>
+
+          <a href="#produkter/lorem">
+            <section class="product">
+              <img src="images/lorem.png" alt="">
+              <h3>Lorem</h3>
+              <p>1 234 567 890 kr</p>
+            </section>
+          </a>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </article>
+
+    <!--ABOUT PAGE-->
+    <article id="om-oss">
+      <div class="content">
+        <h2 class="title">Vad är Gurras?</h2>
+        <p>Vi grundades ur en enkel men stark idé: att bryta mönstret för traditionella webbshoppar genom att samla det allra bästa från naturens fantastiska mångfald och hemmets smidiga lösningar under ett och samma tak. Hos oss möts passionen för det levande och unika med drivkraften att skapa en enklare, härligare och mer inspirerande vardag.</p>
+        <img src="images/om-oss.jpg" alt="">
+        <p>Vår resa började med en nyfikenhet på vad som händer när man kombinerar funktion med stark personlighet. Istället för att begränsa oss till en enda snäv produktkategori valde vi att skapa en samlingsplats för produkter som gör skillnad – från naturliga energikällor och grönskande livskraft till smart hushållsteknik och färgstarka följeslagare. Varje enskilt objekt i vårt utbud handplockas med omsorg för sin höga kvalitet, sin tidlösa karaktär och sin förmåga att väcka glädje.</p>
+        <section>
+          <h3>Vår Vision & Filosofi</h3>
+          <p>Vi tror inte på massproduktion utan eftertanke eller ett enformigt hem. Vår filosofi vilar på tre grundpelare som styr allt vi gör:</p>
+          <ul>
+            <li><strong>Kvalitet & Funktion:</strong> Oavsett om det handlar om avancerad hushållsteknik eller naturliga råvaror ska varje produkt leverera över förväntan och hålla vad den lovar.</li>
+            <li><strong>Mångfald & Karaktär:</strong> Vi hyllar det unika. Vi vill erbjuda ett sortiment som överraskar, inspirerar och tillför en personlig touch till din miljö.</li>
+            <li><strong>Hållbarhet i Fokus:</strong> Vi värnar om både naturen och långsiktiga värden. Vi prioriterar biologiska material, energieffektiva lösningar och produkter som står sig över tid.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Ett Handplockat Sortiment med Hjärta</h3>
+          <p>Bakom varje beskrivning och specifikation ligger ett engagerat team som brinner för god design, smidig e-handel och enastående kundservice. Vi testar, utvärderar och finjusterar hela tiden vårt utbud för att säkerställa att du som kund alltid får en trygg och inspirerande upplevelse från det ögonblick du klickar dig in hos oss till dess att din leverans anländer.</p>
+          <img src="images/our-team.jpg" alt="">
+          <p>Tack för att du är en del av vår resa. Vi ser fram emot att fortsätta förgylla din vardag med unika produkter som gör livet lite mer färgstarkt och funktionellt.</p>
+        </section>
+        <p><em>Har du frågor, idéer eller vill veta mer om oss? Tveka inte att kontakta vår kundtjänst – vi finns alltid här för dig!</em></p>
+      </div>
+    </article>
+
+    <!--PRODUCT PAGES-->
+    <article id="produkter/apa" class="product-page">
+      <div class="content">
+        <img src="images/apa.jpg" alt="">
+        <h2>Apa</h2>
+        <p class="product-price"></p>
+        <form data-label="Apa" data-price="1500">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 1 500 kr</label>
+        </form>
+        <p>Ett djur som gillar att äta bananer.</p>
+        <p>Denna mångsidiga och energifyllda följeslagare är byggd för både äventyr och avkoppling. Med sitt mjuka uttryck och sin naturliga nyfikenhet förvandlar apan varje vardagsstund till en underhållande upplevelse.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Akrobatisk precision:</strong> Utrustad med en fullt flexibel svans och greppvänliga händer, perfekta för klättring, balansgång och snabba manövrar i hemmamiljön.</li>
+            <li><strong>Hög kognitiv kapacitet:</strong> Älskar problemlösning! Utmärkt på att klura ut gömställen, öppna kluriga förpackningar och lära sig nya bus.</li>
+            <li><strong>Social & Uttrycksfull:</strong> Levererar ett brett spektrum av ljud och gester - från nöjda tystnader till entusiastiska jubelrop när favoritsnacket visas upp.</li>
+            <li><strong>Självgående energisystem:</strong> Drivs enkelt på naturligt bränsle (framför allt bananer, frukt och nötter) och laddas automatiskt under mysiga tupplurar.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Klassisk Trädklättrare</li>
+            <li><strong>Material:</strong> Mjuk, tålig päls och ett par oemotståndliga, kloka ögon</li>
+            <li><strong>Tillbehör som ingår:</strong> En obegränsad mängd charm och ständig rörelseglädje</li>
+          </ul>
+        </section>
+        <p><em>Observera: Håll värdesaker och lösa föremål på säkert avstånd för optimal användarupplevelse.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/banan" class="product-page">
+      <div class="content">
+        <img src="images/banan.png" alt="">
+        <h2>Banan</h2>
+        <form data-label="Banan" data-price="20">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 20 kr</label>
+        </form>
+        <p>En gul avlång frukt som apor tycker om.</p>
+        <p>Oavsett om du behöver ett snabbt mellanmål i farten, ett energitillskott före träningen eller en ingrediens som lyfter din smoothie till nya höjder, levererar denna böjda klassiker alltid högsta kvalitet.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Ergonomisk & Bärbar:</strong> Levereras i ett helt naturligt, biologiskt nedbrytbart skyddsskal som gör den lätt att ta med sig utan krångel.</li>
+            <li><strong>Omedelbar Energikick:</strong> Rik på kolhydrater och naturliga sockerarter som ger dig snabb och långvarig energi när du behöver den som mest.</li>
+            <li><strong>Näringstät Formel:</strong> Laddad med kalium, vitamin B6 och fiber för att stödja en balanserad livsstil.</li>
+            <li><strong>Mångsidig Användning:</strong> Fungerar utmärkt som den är, skivad på gröten, i bakverk eller som den hemliga ingrediensen i din favoritsmoothie.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Gul Böjd Premium</li>
+            <li><strong>Förpackning:</strong> 100 % Biologiskt nedbrytbart skal</li>
+            <li><strong>Form:</strong> Naturligt svängd för optimalt grepp</li>
+            <li><strong>Nyckelingredienser:</strong> Kalium, Fiber, Vitamin B6, Naturlig sötma</li>
+          </ul>
+        </section>
+        <p><em>Observera: Skalet bör tas av före konsumtion. Förvaras i rumstemperatur för optimal mognad och smakutveckling.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/citron" class="product-page">
+      <div class="content">
+        <img src="images/citron.jpg" alt="">
+        <h2>Citron</h2>
+        <form data-label="Citron" data-price="10">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 10 kr</label>
+        </form>
+        <p>En gul rund frukt som är ganska sur.</p>
+        <p>Oavsett om du vill förhöja smaken på en god maträtt, pressa fräsch juice, baka syrliga desserter eller ge ditt dricksvatten en naturlig fräschör, levererar denna mångsidiga frukt maximal fräschör i varje droppe.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Intensiv Smaksättare:</strong> Ger en perfekt balans av syra och fräschör till allt från salladsdressingar och marinader till fiskrätter och bakverk.</li>
+            <li><strong>C-Vitaminboost:</strong> Packad med naturligt C-vitamin och antioxidanter som stöttar immunförsvaret och ger dig en frisk start på dagen.</li>
+            <li><strong>Mångsidig Rengörare:</strong> Fungerar även utmärkt som ett naturligt, kemikaliefritt rengöringsmedel för att ta bort fläckar och ge glans i köket.</li>
+            <li><strong>Uppfriskande Arom:</strong> Skalet innehåller eteriska oljor med en härlig citrusdoft som sprider en ren och fräsch känsla.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Klassisk Gul Citrus</li>
+            <li><strong>Färg:</strong> Solgul med strukturrikt skal</li>
+            <li><strong>Innehåll:</strong> Fruktkött, syrlig juice och aromatiskt skal (zest)</li>
+            <li><strong>Nyckelingredienser:</strong> Citronsyra, C-vitamin, Antioxidanter</li>
+          </ul>
+        </section>
+        <p><em>Observera: Skölj skalet noga före användning om du ska använda zesten. Förvaras bäst i kylskåp för maximal hållbarhet och saftighet.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/dammsugare" class="product-page">
+      <div class="content">
+        <img src="images/dammsugare.jpg" alt="">
+        <h2>Dammsugare</h2>
+        <form data-label="Dammsugare" data-price="900">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 900 kr</label>
+        </form>
+        <p>En maskin som suger damm.</p>
+        <p>Oavsett om du behöver städa djupa mattor, känsliga trägolv eller svåråtkomliga hörn, anpassar sig UltraClean smidigt efter dina behov och lämnar ditt hem fräscht och rent.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Maximal Sugkraft:</strong> Avancerad motorteknik som effektivt fångar upp allt från mikroskopiska dammpartiklar till grövre smuts.</li>
+            <li><strong>HEPA-filtrering:</strong> Inbyggt högeffektivt filter som fångar upp 99,9 % av allergener och damm, vilket ger en renare och friskare inomhusluft.</li>
+            <li><strong>Tystgående Drift:</strong> Ljuddämpad konstruktion som gör att du kan städa när som helst utan att störa resten av hushållet.</li>
+            <li><strong>Ergonomisk Design:</strong> Lättviktig ram med 360-graders svängbara hjul och teleskoprör för maximal räckvidd och bekvämlighet.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> UltraClean Pro-500</li>
+            <li><strong>Filtrering:</strong> Tvättbart HEPA 13-filter</li>
+            <li><strong>Ljudnivå:</strong> Ultra-tyst (65 dB)</li>
+            <li><strong>Tillbehör som ingår:</strong> Kombimunstycke, fogmunstycke och mjuk dammborste</li>
+          </ul>
+        </section>
+        <p><em>Observera: Töm dammbehållaren eller byt påse regelbundet för att bibehålla optimal sugkraft och prestanda.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/ek" class="product-page">
+      <div class="content">
+        <img src="images/ek.jpg" alt="">
+        <h2>Ek</h2>
+        <form data-label="Ek" data-price="1120">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 1 120 kr</label>
+        </form>
+        <p>Ett stort träd med löv och ekollon.</p>
+        <p>Oavsett om den står som en stolt solitär i parken eller skapar ett prunkande ekosystem för hundratals arter, erbjuder detta ädla trädtillskott enastående hållbarhet, skugga och naturlig skönhet över generationer.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Oslagbar Hållbarhet:</strong> Ett extremt robust och starkt trädslag som står emot hårt väder och kan leva i flera hundra år.</li>
+            <li><strong>Ekosystemets Hjälte:</strong> Fungerar som ett levande hem och matkälla för ett rikt djurliv, inklusive fåglar, ekorrar och värdefulla insekter.</li>
+            <li><strong>Mäktigt Skuggskydd:</strong> Den breda och täta kronan ger svalkande, behaglig skugga under varma sommardagar.</li>
+            <li><strong>Tidlös Estetik:</strong> Förvandlar trädgården med sina karaktäristiska flikiga blad, ståtliga stamtextur och vackra höstfärger.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Skogsek (Quercus robur)</li>
+            <li><strong>Växtsätt:</strong> Kraftigt med utbredd krona</li>
+            <li><strong>Bladverk:</strong> Klassiskt flikade gröna blad som skiftar i varmt gyllenbrunt på hösten</li>
+            <li><strong>Frukt:</strong> Naturligt förekommande ekollon</li>
+          </ul>
+        </section>
+        <p><em>Observera: Kräver gott om utrymme för rötter och krona att växa. Vattnas rikligt under de första etableringsåren.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/fisk" class="product-page">
+      <div class="content">
+        <img src="images/fisk.jpg" alt="">
+        <h2>Fisk</h2>
+        <form data-label="Fisk" data-price="300">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 300 kr</label>
+        </form>
+        <p>En sladdrig sak som flyter i vattnet.</p>
+        <p>Denna simmande skönhet tillför liv och färg till varje vattenmiljö. Med sina smidiga rörelser och glänsande fjäll skapar den en avkopplande atmosfär som sprider ro i hela rummet.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Hydrodynamisk Precision:</strong> Utrustad med strömlinjeformad kropp och perfekta fenor för tyst och smidig navigering i alla vattendrag.</li>
+            <li><strong>Harmonisk Närvaro:</strong> Verkar avslappnande och stressreducerande att betrakta när den glider fram i sin naturliga rytm.</li>
+            <li><strong>Lågt Underhållsbehov:</strong> Kräver varken promenader eller högljudda aktiviteter - trivs bäst med rent vatten och regelbunden utfodring.</li>
+            <li><strong>Naturlig Färgprakt:</strong> Vackert mönstrade fjäll som reflekterar ljuset och ger din vattenmiljö ett levande uttryck.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Klassisk Vattennavigatör</li>
+            <li><strong>Framdrivning:</strong> Fendriven hydrodynamik</li>
+            <li><strong>Miljö:</strong> Sötvatten eller saltvatten</li>
+            <li><strong>Drivmedel:</strong> Fiskfoder, flingor och mindre vattenorganismer</li>
+          </ul>
+        </section>
+        <p><em>Observera: Kräver välfiltrerat och syresatt vatten samt regelbundna vattenbyten för optimal funktion och livslängd.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/gustav" class="product-page">
+      <div class="content">
+        <img src="images/gustav.jpg" alt="">
+        <h2>Gustav</h2>
+        <form data-label="Gustav" data-price="951106">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 951106 kr</label>
+        </form>
+        <p>En grabb med två ben och armar.</p>
+        <p>Med en imponerande känsla för detaljer, tydliga instruktioner och ett öga för stilren kodstyrning förvandlar du enkla idéskisser till perfekt strukturerade leveranser.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Skarp Kravställning:</strong> Mästare på att formulera exakta direktiv - från strukturella HTML-taggar till strikt formatkontroll utan blankrader.</li>
+            <li><strong>Kreativ Vision:</strong> Driven av en bred idébredd som sträcker sig från akrobatiska apor och saftiga citroner till majestätiska ekar och simmande fiskar.</li>
+            <li><strong>Hög Adaptivitet:</strong> Testar, utmanar och finjusterar resultatet tills varje radkod sitter exakt där den ska.</li>
+            <li><strong>Obegränsad Potential:</strong> Inbyggd förmåga att ständigt hitta nya projekt, idéer och vinklar att utforska.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Visionär & Promptingenjör Pro</li>
+            <li><strong>Operativsystem:</strong> Mänsklig intelligens & ren skaparglädje</li>
+            <li><strong>Funktioner:</strong> Idégenerering, kvalitetskontroll och kodoptimering</li>
+            <li><strong>Tillbehör som ingår:</strong> Direkt feedback, skarpa ögon och oändlig potential</li>
+          </ul>
+        </section>
+        <p><em>Observera: Fungerar bäst med god tillgång till kaffe, spännande utmaningar och snabba AI-svar.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/helikopter" class="product-page">
+      <div class="content">
+        <img src="images/helikopter.jpg" alt="">
+        <h2>Helikopter</h2>
+        <form data-label="Helikopter" data-price="180000">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 180 000 kr</label>
+        </form>
+        <p>Ett tungt fordon med en fläkt på taket.</p>
+        <p>Oavsett om det handlar om snabba transporter över svårtillgänglig terräng, spektakulära utsiktsfärder eller ett effektivt arbetsredskap i luften, levererar denna helikopter maximal prestanda, stabilitet och precision under alla flygförhållanden.</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Vertikal Start & Landning (VTOL):</strong> Starta och landa med millimeterprecision på såväl små ytor som öppna fält och byggnadstak.</li>
+            <li><strong>Avancerad Rotor- & Gyrostabilisering:</strong> Inbyggt aerodynamiskt stödsystem som ger en mjuk, stadig och kontrollerad flygning även i utmanande vindförhållanden.</li>
+            <li><strong>Panoramacabin med 360° Sikt:</strong> Ergonomisk förarhytt utrustad med reptåligt specialglas som ger pilot och passagerare en oslagbar överblick över landskapet.</li>
+            <li><strong>Mångsidig Räckvidd:</strong> Optimerad bränsle- och motorteknik som kombinerar hög marschfart med lång räckvidd och imponerande lyftkapacitet.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li><strong>Modell:</strong> Heli Pro-800</li>
+            <li><strong>Framdrivning:</strong> Dubbel turbinmotor med variabel rotorstyrning</li>
+            <li><strong>Räckvidd:</strong> Upp till 650 km per tankning</li>
+            <li><strong>Kapacitet:</strong> Pilot + 4 passagerare samt bagageutrymme</li>
+            <li><strong>Säkerhetssystem:</strong> Nödchut-förberedd och trippla redundanta styrelektroniksystem</li>
+          </ul>
+        </section>
+        <p><em>Observera: Kräver giltigt flygcertifikat och regelbunden servicerevision för optimal säkerhet och prestanda i luften.</em></p>
+      </div>
+    </article>
+
+    <article id="produkter/i" class="product-page">
+      <div class="content">
+        <img src="images/template.jpg" alt="">
+        <h2>Template</h2>
+        <form data-label="Template" data-price="100">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 100 kr</label>
+        </form>
+        <p>template</p>
+      </div>
+    </article>
+
+    <article id="produkter/j" class="product-page">
+      <div class="content">
+        <img src="images/template.jpg" alt="">
+        <h2>Template</h2>
+        <form data-label="Template" data-price="100">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 100 kr</label>
+        </form>
+        <p>template</p>
+      </div>
+    </article>
+
+    <article id="produkter/k" class="product-page">
+      <div class="content">
+        <img src="images/template.jpg" alt="">
+        <h2>Template</h2>
+        <form data-label="Template" data-price="100">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> · 100 kr</label>
+        </form>
+        <p>template</p>
+      </div>
+    </article>
+
+    <article id="produkter/lorem" class="product-page">
+      <div class="content">
+        <img src="images/lorem.png" alt="">
+        <h2>Lorem</h2>
+        <form data-label="Lorem" data-price="1234567890">
+          <label><input name="quantity" type="number" value="0" min="0" max="99"> ·
+            1 234 567 890 kr</label>
+        </form>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>Cupiditate deleniti dolor quos voluptates laborum cum illum repellat! Impedit laudantium minima sequi cumque voluptatum, beatae, animi dolor nesciunt ut aliquid voluptatibus?</p>
+        <section>
+          <h3>Nyckelegenskaper</h3>
+          <ul>
+            <li><strong>Odit dolores quibusdam doloremque enim nam:</strong> Exercitationem eligendi praesentium soluta, rem expedita quibusdam quidem? Accusantium perspiciatis consequuntur, porro voluptatibus distinctio incidunt voluptates velit maxime cum numquam, nihil quas error consectetur quod amet nam sapiente dolore quos.</li>
+            <li><strong>Rem eligendi blanditiis facilis enim possimus eius qui:</strong> Nisi, vel. Deserunt voluptates, modi iure reprehenderit pariatur voluptatibus delectus nobis molestias, debitis porro hic laudantium incidunt accusantium ipsam. Perferendis harum esse numquam, ipsam hic praesentium assumenda, nisi sit corrupti, facere quidem.</li>
+            <li><strong>Facilis suscipit repellat, incidunt delectus unde ipsam:</strong> Perferendis, quam repellendus illo id quaerat laboriosam, facere sit dolorum dolor quisquam in modi fugit doloribus, rem vitae iusto. Consequuntur. Neque temporibus mollitia doloremque perspiciatis? Molestias ipsa impedit inventore, aut dolorem saepe aliquid perferendis debitis! Maiores magnam provident minus. Illum id repudiandae aspernatur ullam consectetur odit error temporibus fuga earum.</li>
+            <li><strong>Sunt cum a, sapiente nostrum nobis assumenda ut:</strong> Harum praesentium ducimus perspiciatis accusantium voluptate magni! Laborum et labore quis adipisci cupiditate? Voluptatem delectus incidunt architecto, voluptas suscipit omnis ullam! Tempore id iusto vero optio labore cupiditate recusandae provident! Reprehenderit quisquam, ut dolores asperiores quia sapiente quibusdam ratione ducimus quidem blanditiis, recusandae est harum temporibus voluptates a, iusto odit aliquid possimus. Qui molestiae ex consequuntur? Consequatur excepturi iure laudantium!</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Specifikationer</h3>
+          <ul>
+            <li>Repellendus accusamus architecto iste eos quasi aliquam ipsam deserunt blanditiis quaerat mollitia deleniti similique maiores culpa earum soluta quibusdam excepturi saepe voluptate quis nemo consequuntur commodi nesciunt, impedit quam. Doloremque?</li>
+            <li>Nihil dolore pariatur incidunt at exercitationem, distinctio, dolores nulla expedita, illo eveniet repudiandae.</li>
+            <li>Veniam, minima? Cupiditate excepturi illum voluptate nulla, tenetur ipsam quo consequuntur quis dolore perspiciatis impedit nemo recusandae, quibusdam nam quas.</li>
+          </ul>
+        </section>
+        <p><em>Quos quod adipisci, saepe at consequuntur consectetur error ullam, ab incidunt, quasi natus alias assumenda magnam veniam laborum praesentium non sunt rerum.</em></p>
+      </div>
+      </div>
+    </article>
+
+    <!--CHECKOUT PAGE-->
+    <article id="kassa">
+      <div class="content">
+        <h2 class="title">Kassan</h2>
+      </div>
+    </article>
+  </main>
+
+  <!--FOOTER-->
+  <footer>
+    <div class="footer-content">
+      <a href="index.html">
+        <img src="images/logo-inverted.png" class="logo">
+      </a>
+      <p class="copyright">Copyright &copy; 2026 Gurras AB</p>
+    </div>
+  </footer>
+
+  <script src="fe26-shop.js"></script>
+</body>
+
+</html>

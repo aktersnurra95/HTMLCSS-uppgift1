@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas shop</title>
+  <!-- empty icon: stops the browser from asking for favicon.ico (404 in the console) -->
+  <link rel="icon" href="data:,">
+</head>
+
+<!-- d-flex flex-column min-vh-100 on body + flex-grow-1 on main = sticky footer -->
+
+<body class="d-flex flex-column min-vh-100">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md bg-body border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#start">Min shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meny"
+          aria-controls="meny" aria-expanded="false" aria-label="Visa meny">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="meny">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="#start">Välkommen</a>
+            <a class="nav-link" href="#produkter">Våra produkter</a>
+          </div>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#varukorg"
+            aria-controls="varukorg">Varukorg</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-4">
+    <article id="start">
+      <h2>Start</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure in maiores molestias consequatur ut
+        quibusdam nesciunt dolor illo nihil corporis impedit, voluptas dicta a quod, accusantium sequi animi quas?</p>
+      <p>Corrupti mollitia, dignissimos corporis atque odio deserunt doloribus aliquam reiciendis eius molestias est
+        nisi vero! Iste ad asperiores possimus. Voluptatibus excepturi eius deleniti labore! Corrupti laborum
+        necessitatibus sed aut perspiciatis.</p>
+      <p>Deleniti accusantium soluta debitis facilis. Mollitia, culpa sequi! Quos, quasi. Magni facilis nulla atque,
+        ipsam ducimus iste voluptates praesentium cum perferendis nesciunt, pariatur possimus voluptate illum debitis,
+        eos eaque reiciendis.</p>
+    </article>
+
+    <article id="produkter">
+      <h2 class="mb-4">Våra produkter</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <section class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Badanka</h3>
+              <p class="card-text">En trevlig badanka att prata med när du kodar. Ankan svarar inget men du upptäcker
+                själv att du visste egentligen.</p>
+              <p class="card-text"><b>Pris:</b> 50 kr</p>
+              <p><a href="#produkt-badanka">Läs mer</a></p>
+            </div>
+            <div class="card-footer">
+              <form class="input-group" data-label="Badanka" data-price="50">
+                <label class="input-group-text" for="antal-badanka">Antal</label>
+                <input id="antal-badanka" class="form-control" name="quantity" type="number" value="0" min="0" max="999">
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Slagpåse</h3>
+              <p class="card-text">En påse fylld med mjuka ärtor att slå på när syntax känns övermäktig. (Hellre det än
+                att slå på sin lärare.)</p>
+              <p class="card-text"><b>Pris:</b> 110 kr</p>
+            </div>
+            <div class="card-footer">
+              <form class="input-group" data-label="Slagpåse" data-price="110">
+                <label class="input-group-text" for="antal-slagpase">Antal</label>
+                <input id="antal-slagpase" class="form-control" name="quantity" type="number" value="0" min="0" max="999">
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Jolt-Cola</h3>
+              <p class="card-text">Varför mesa med kaffe och Coca-Cola när man kan bli darrhänt och uppåt på en enda
+                Jolt?</p>
+              <p class="card-text"><b>Pris:</b> 25 kr</p>
+            </div>
+            <div class="card-footer">
+              <form class="input-group" data-label="Jolt Cola" data-price="25">
+                <label class="input-group-text" for="antal-jolt">Antal</label>
+                <input id="antal-jolt" class="form-control" name="quantity" type="number" value="0" min="0" max="999">
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <article id="produkt-badanka">
+      <h2>Badanka</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil esse debitis laboriosam a tempore minima
+        quisquam impedit quidem! Unde, harum qui quaerat repellendus placeat nulla voluptas iusto nemo voluptatum.</p>
+      <p>Aliquam praesentium animi ex in autem magni. Incidunt porro accusamus facilis corrupti delectus quo? Blanditiis
+        accusantium magni id minus laboriosam. Quod unde, laudantium earum inventore doloremque dolorum dolore vitae
+        dignissimos.</p>
+      <p>Voluptatem dolor porro ipsum accusantium numquam voluptates temporibus eum! Velit facere quis animi tempore
+        adipisci, recusandae mollitia numquam saepe sint inventore eius, natus accusamus voluptate, earum ipsam
+        aspernatur asperiores tempora.</p>
+      <p>Dicta consequatur saepe quisquam, doloremque aspernatur rem! Doloribus perferendis similique modi cumque
+        incidunt quaerat molestiae voluptatum. Ab, necessitatibus autem officiis, corporis sint in consectetur quas
+        culpa, eligendi ipsum doloremque recusandae!</p>
+      <p><b>Pris:</b> 50 kr</p>
+      <!-- Same data-label as in the product list = same product, the quantity is kept in sync -->
+      <form class="input-group w-auto" data-label="Badanka" data-price="50">
+        <label class="input-group-text" for="antal-badanka-detalj">Antal</label>
+        <input id="antal-badanka-detalj" class="form-control" name="quantity" type="number" value="0" min="0"
+          max="999">
+      </form>
+      <p class="mt-4"><a href="#produkter">Tillbaka till produktlistan</a></p>
+    </article>
+
+    <article id="checka-ut">
+      <h2>Dina adressuppgifter</h2>
+      <form class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label" for="fornamn">Förnamn</label>
+          <input class="form-control" id="fornamn" type="text" name="firstName" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="efternamn">Efternamn</label>
+          <input class="form-control" id="efternamn" type="text" name="lastName" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="epost">E-post</label>
+          <input class="form-control" id="epost" type="email" name="email" required>
+        </div>
+        <p><i>Det finns många fler fält vi vill ha här, adress uppdelad i olika delar, kanske telefon etc.</i></p>
+        <div class="mb-3">
+          <label class="form-label" for="frakt">Välj fraktalternativ</label>
+          <!-- 
+          In order to make a select
+          required -> the user has to choose something
+          add required to the select AND
+          use value="" on the first option 
+          and make it disabled and selected
+          -->
+          <select class="form-select" id="frakt" required>
+            <option value="" disabled selected>Välj fraktsätt</option>
+            <option>PostNord</option>
+            <option>DHL</option>
+            <option>Schenker</option>
+          </select>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" id="erbjudanden" type="checkbox" name="allowCampaignMails">
+          <label class="form-check-label" for="erbjudanden">Skicka mig erbjudanden via e-post</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="kommentarer">Frågor/kommentarer</label>
+          <textarea class="form-control" id="kommentarer" name="comments" rows="4"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Avsluta köpet</button>
+      </form>
+    </article>
+  </main>
+
+  <!-- The cart lives in an offcanvas: a panel that slides in from the side.
+       Bootstrap's JS opens it via the button with data-bs-toggle in the navbar -->
+  <aside class="offcanvas offcanvas-end" tabindex="-1" id="varukorg" aria-labelledby="varukorg-rubrik">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5" id="varukorg-rubrik">Varukorg</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Stäng"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="cart"></div>
+      <p class="mt-3"><a class="btn btn-primary" href="#checka-ut">Avsluta ditt köp</a></p>
+    </div>
+  </aside>
+
+  <footer class="bg-body-secondary border-top text-center py-4">
+    © 2026 Bra företaget AB
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

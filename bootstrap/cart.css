@@ -1,0 +1,178 @@
+/* logic for the cart panel */
+.cart-button {
+  float: right;
+  display: block;
+  padding: 8px 8px 5px 5px;
+  margin: 17px 15px 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  img {
+    height: 30px;
+  }
+}
+
+.cart-panel {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#cart-control {
+  height: 0;
+  width: 0;
+  position: fixed;
+  top: 35px;
+  right: max(52px, (100% - 1080px) / 2 + 32px);
+  cursor: pointer;
+}
+
+#cart-control:checked+div.cart-panel {
+  display: block;
+
+}
+
+.cart-back-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-button-block {
+  display: block;
+  width: fit-content;
+}
+
+.cart-close-button {
+  margin-top: -5px;
+  float: right;
+  font-size: small;
+  color: #888;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.cart-container {
+  position: fixed;
+  top: 82px;
+  right: max(20px, (100% - 1080px) / 2);
+  width: fit-content;
+}
+
+/* styling of cart */
+.cart-container {
+  clear: both;
+  padding: 20px;
+  padding-bottom: 0px;
+  border: 1px solid #000;
+  background-color: #fff;
+
+  h2 {
+    margin-top: 0px;
+    float: left;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    tr {
+      background-color: #fff;
+
+    }
+
+    td {
+      padding: 10px;
+
+      &:nth-of-type(1) {
+        min-width: 80px;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        text-align: right;
+      }
+
+      /* TEST OF TABLE FORMATTING */
+      &:nth-of-type(4) {
+        width: 200px;
+      }
+
+      &:nth-of-type(5) {
+        text-align: right;
+        width: 22px;
+        /* !!! */
+      }
+
+      input {
+        text-align: center;
+        field-sizing: content;
+        min-width: 30px;
+
+        &::-webkit-inner-spin-button {
+          opacity: 1;
+        }
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid #000;
+
+      tr:nth-child(even) {
+        background-color: #f7f7f7;
+      }
+    }
+
+    tfoot {
+
+      th {
+        padding-top: 10px;
+        padding-right: 8px;
+        text-align: right;
+      }
+
+      tr:nth-child(2) th {
+        padding-top: 0;
+        color: #888;
+        font-size: small;
+      }
+
+      tr:nth-child(2) th:nth-child(2) {
+        padding-right: 11px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+  }
+
+  button.empty-cart {
+    position: relative;
+    top: -25px;
+    left: 2px;
+    cursor: pointer;
+  }
+
+  p.empty {
+    color: #888;
+  }
+}
+
+.cart {
+  clear: both;
+}
