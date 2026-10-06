@@ -4,16 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webshop</title>
+  <title>Gurkans webbshop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <!--HEADER, NAVIGATION AND CART BUTTON-->
   <header>
     <div class="header-content">
       <a href="index.html">
-        <img src="images/logo.png" class="logo">
+        <img src="images/logo.png" class="logo" alt="Gurkans webbshop logga">
       </a>
       <label class="cart-button" for="cart-control"><img src="images/cart.png" alt="Varukorg"></label>
     </div>
@@ -39,26 +40,28 @@
   <!--CART PANEL-->
   <aside>
     <input type="checkbox" id="cart-control">
-    <div class="cart-panel">
-      <label class="cart-back-button" for="cart-control">
-        <label class="cart-button-block">
-          <div class="cart-container">
-            <h2>Varukorg</h2>
-            <label class="cart-close-button" for="cart-control">
-              <h2>×</h2>
-            </label>
-            <div class="cart"></div>
-          </div>
-        </label>
+    <div class="cart-background">
+      <label class="cart-background-button" for="cart-control"></label>
+    </div>
+    <div class="cart-container">
+      <h2>Varukorg</h2>
+      <label class="cart-close-button" for="cart-control">
+        <h2>×</h2>
       </label>
+      <div class="cart"></div>
+      <button type="button" class="cart-checkout-button" onclick="location.href='#kassa'">
+        <!--use label for cart control to uncheck input and close the cart-->
+        <label for="cart-control">Gå till kassan</label>
+      </button>
     </div>
   </aside>
 
   <main>
+
     <!--DEFAULT PAGE-->
     <article id="start">
       <div class="content">
-        <h2 class="title">Välkommen till Gurras Webbshop!</h2>
+        <h2 class="title">Välkommen till Gurkans Webbshop!</h2>
         <p>Vi är otroligt glada att du har hittat hit. Hos oss kliver du in i ett handplockat och fascinerande utbud där gränserna mellan naturens egna underverk, sprudlande livskraft och hemmets mest effektiva vardagslösningar suddas ut. Vår filosofi är enkel: vi vill erbjuda unika produkter som tillför mervärde, energi, funktion och glädje i varje hörn av ditt liv.</p>
         <p>Oavsett om du söker efter någonting som förvandlar ditt hem till en livfull oas, ett naturligt energitillskott som håller dig igång under tunga arbetsdagar, eller moderna redskap som gör det tråkiga städarbetet till en ren fröjd, så har vi någonting speciellt anpassat för dig. Vi tror på kvalitet, mångsidighet och framför allt på idén om att varje produkt bär på sin egen unika historia och karaktär.</p>
         <section>
@@ -79,15 +82,15 @@
       </div>
     </article>
 
+    <!--PRODUCTS-->
     <article id="produkter">
       <div class="content">
         <h2 class="title">Produkter</h2>
         <div class="product-container">
 
-          <!--PRODUCTS-->
           <a href="#produkter/apa">
             <section class="product">
-              <img src="images/apa.jpg" alt="">
+              <img src="images/apa.jpg" alt="Apa">
               <h3>Apa</h3>
               <p>1 500 kr</p>
             </section>
@@ -95,7 +98,7 @@
 
           <a href="#produkter/banan">
             <section class="product">
-              <img src="images/banan.png" alt="">
+              <img src="images/banan.png" alt="Banan">
               <h3>Banan</h3>
               <p>20 kr</p>
             </section>
@@ -103,7 +106,7 @@
 
           <a href="#produkter/citron">
             <section class="product">
-              <img src="images/citron.jpg" alt="">
+              <img src="images/citron.jpg" alt="Citron">
               <h3>Citron</h3>
               <p>10 kr</p>
             </section>
@@ -111,7 +114,7 @@
 
           <a href="#produkter/dammsugare">
             <section class="product">
-              <img src="images/dammsugare.jpg" alt="">
+              <img src="images/dammsugare.jpg" alt="Dammsugare">
               <h3>Dammsugare</h3>
               <p>900 kr</p>
             </section>
@@ -119,7 +122,7 @@
 
           <a href="#produkter/ek">
             <section class="product">
-              <img src="images/ek.jpg" alt="">
+              <img src="images/ek.jpg" alt="Ek">
               <h3>Ek</h3>
               <p>1 120 kr</p>
             </section>
@@ -127,7 +130,7 @@
 
           <a href="#produkter/fisk">
             <section class="product">
-              <img src="images/fisk.jpg" alt="">
+              <img src="images/fisk.jpg" alt="Fisk">
               <h3>Fisk</h3>
               <p>300 kr</p>
             </section>
@@ -135,7 +138,7 @@
 
           <a href="#produkter/gustav">
             <section class="product">
-              <img src="images/gustav.jpg" alt="">
+              <img src="images/gustav.jpg" alt="Gustav">
               <h3>Gustav</h3>
               <p>951106 kr</p>
             </section>
@@ -143,7 +146,7 @@
 
           <a href="#produkter/helikopter">
             <section class="product">
-              <img src="images/helikopter.jpg" alt="">
+              <img src="images/helikopter.jpg" alt="Helikopter">
               <h3>Helikopter</h3>
               <p>180 000 kr</p>
             </section>
@@ -151,7 +154,7 @@
 
           <a href="#produkter/i">
             <section class="product">
-              <img src="images/dammsugare.jpg" alt="">
+              <img src="images/i.jpg" alt="">
               <h3>I</h3>
               <p>300 kr</p>
             </section>
@@ -159,7 +162,7 @@
 
           <a href="#produkter/j">
             <section class="product">
-              <img src="images/ek.jpg" alt="">
+              <img src="images/j.jpg" alt="">
               <h3>J</h3>
               <p>300 kr</p>
             </section>
@@ -167,7 +170,7 @@
 
           <a href="#produkter/k">
             <section class="product">
-              <img src="images/fisk.jpg" alt="">
+              <img src="images/k.jpg" alt="">
               <h3>K</h3>
               <p>300 kr</p>
             </section>
@@ -175,7 +178,7 @@
 
           <a href="#produkter/lorem">
             <section class="product">
-              <img src="images/lorem.png" alt="">
+              <img src="images/lorem.png" alt="Lorem">
               <h3>Lorem</h3>
               <p>1 234 567 890 kr</p>
             </section>
@@ -188,7 +191,7 @@
     <!--ABOUT PAGE-->
     <article id="om-oss">
       <div class="content">
-        <h2 class="title">Vad är Gurras?</h2>
+        <h2 class="title">Vad är Gurkans?</h2>
         <p>Vi grundades ur en enkel men stark idé: att bryta mönstret för traditionella webbshoppar genom att samla det allra bästa från naturens fantastiska mångfald och hemmets smidiga lösningar under ett och samma tak. Hos oss möts passionen för det levande och unika med drivkraften att skapa en enklare, härligare och mer inspirerande vardag.</p>
         <img src="images/om-oss.jpg" alt="">
         <p>Vår resa började med en nyfikenhet på vad som händer när man kombinerar funktion med stark personlighet. Istället för att begränsa oss till en enda snäv produktkategori valde vi att skapa en samlingsplats för produkter som gör skillnad – från naturliga energikällor och grönskande livskraft till smart hushållsteknik och färgstarka följeslagare. Varje enskilt objekt i vårt utbud handplockas med omsorg för sin höga kvalitet, sin tidlösa karaktär och sin förmåga att väcka glädje.</p>
@@ -526,15 +529,42 @@
       </div>
     </article>
 
+    <!--CHECKOUT PAGE-->
+    <article id="kassa">
+      <div class="content">
+        <h2 class="title">Kassan</h2>
+        <form autocomplete="on">
+          <fieldset>
+            <legend>Leveransuppgifter</legend>
+            <label>Förnamn:<br><input type="text" name="firstName" size="30" required><br></label>
+            <label>Efternamn:<br><input type="text" name="lastName" size="30" required><br></label>
+            <label>Gatuadress:<br><input type="text" name="lastName" size="30" required><br></label>
+            <label>Postnummer:<br><input type="text" name="lastName" size="30" required><br></label>
+            <label>Postort:<br><input type="text" name="lastName" size="30" required><br></label>
+            <label>E-post:<br><input type="email" name="email" size="30" placeholder="example@email.com" required><br></label>
+            <label>Fraktalternativ:<br>
+              <select size="5" required>
+                <option>PostNord</option>
+                <option>DHL</option>
+                <option>Schenker</option>
+              </select><br>
+            </label>
+            <label>Frågor/kommentarer:<br><textarea name="comments"></textarea><br></label>
+            <button type="submit">Avsluta köpet</button>
+          </fieldset>
+        </form>
+      </div>
+    </article>
 
   </main>
 
+  <!--FOOTER-->
   <footer>
     <div class="footer-content">
       <a href="index.html">
-        <img src="images/logo-inverted.png" class="logo">
+        <img src="images/logo-inverted.png" class="logo" alt="Gurkans webbshop logga">
       </a>
-      <p class="copyright">Copyright &copy; 2026 Gurras AB</p>
+      <p class="copyright">Copyright &copy; 2026 Gurkan AB</p>
     </div>
   </footer>
 

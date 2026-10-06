@@ -121,15 +121,15 @@ h2.title {
       width: 25%;
     }
 
-    @media(width <920px) {
+    @media(width <992px) {
       width: 33%;
     }
 
-    @media(width <740px) {
+    @media(width <768px) {
       width: 50%;
     }
 
-    @media(width <550px) {
+    @media(width <576px) {
       width: 100%;
     }
 
@@ -206,13 +206,12 @@ html {
   container-type: scroll-state;
 
   header {
-    /*position: fixed;*/
     inset-block-start: 0;
     transition: translate .3s;
   }
 
   @container scroll-state(scrolled: block-end) {
-    header {
+    header:not(:focus-within) {
       translate: 0 -100%;
     }
   }
