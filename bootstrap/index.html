@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
   <!--HEADER, NAVIGATION AND CART BUTTON-->
-  <header>
-    <div class="header-content">
-      <a href="index.html">
-        <img src="images/logo.png" class="logo" alt="Gurkans webbshop logga">
+  <header class="fixed-top bg-white border-bottom shadow-sm">
+    <div class="header-content container d-flex justify-content-between align-items-center py-2">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo.png" class="logo" height="70" alt="Gurkans webbshop logga">
       </a>
-      <label class="cart-button" for="cart-control"><img src="images/cart.png" alt="Varukorg"></label>
+      <button class="cart-btn btn btn-light btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><img src="images/cart.png" height="30" alt="Varukorg"></button>
     </div>
     <div class="header-nav">
       <nav class="header-content">
@@ -29,20 +29,21 @@
 
   <!--CART PANEL-->
   <aside>
-    <input type="checkbox" id="cart-control">
-    <div class="cart-background">
-      <label class="cart-background-button" for="cart-control"></label>
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="cartPanel" aria-labelledby="cartPanelLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartPanelLabel">Varukorg</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="cart"></div>
+        <a class="btn btn-light btn-outline-secondary" href="#checka-ut">Avsluta ditt köp</a>
+        <button type="button" class="cart-checkout-button" onclick="location.href='#kassa'">
+          <!--use label for cart control to uncheck input and close the cart-->
+          <label for="cart-control">Gå till kassan</label>
+        </button>
+      </div>
     </div>
-    <div class="cart-container">
-      <h2>Varukorg</h2>
-      <label class="cart-close-button" for="cart-control">
-        <h2>×</h2>
-      </label>
-      <div class="cart"></div>
-      <button type="button" class="cart-checkout-button" onclick="location.href='#kassa'">
-        <!--use label for cart control to uncheck input and close the cart-->
-        <label for="cart-control">Gå till kassan</label>
-      </button>
+
     </div>
   </aside>
 
@@ -558,7 +559,7 @@
     </div>
   </footer>
 
-  <script src="fe26-shop.js"></script>
+  <script type="module" src="/src/main.js"></script>
 
 </body>
 

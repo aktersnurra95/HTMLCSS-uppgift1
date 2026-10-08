@@ -1,55 +1,445 @@
-// Paging: one html file, several "pages".
-// Only the article whose id matches the #link in the url is shown.
 main {
-  article {
+
+  /* hide all articles that are direct children of main*/
+  >article {
     display: none;
-    // Normally the browser scrolls to the target (the element whose id
-    // matches the #link). Asking for a huge gap above it makes that
-    // impossible, so the page stays at the top.
-    scroll-margin-top: 1000px;
+    scroll-margin-top: 200px;
   }
 
-  article:target {
+  /* applies to all articles that is a direct child of main with ID matching target URL ID */
+  >article:target {
     display: block;
   }
 
-  // no article is the target -> show the start page
-  &:not(:has(article:target)) article#start {
+  /* & = this, if this (main) does not have an article that is the target, then apply to first article */
+  &:not(:has(> article:target))>article:first-of-type {
     display: block;
+  }
+}
+
+/* mark active link in nav menu. one row per page in menu. */
+body {
+
+  /* first 3 articles. */
+  &:has(main > article:nth-of-type(1):target) nav a:nth-of-type(1),
+  &:has(main > article:nth-of-type(2):target) nav a:nth-of-type(2),
+  &:has(main > article:nth-of-type(3):target) nav a:nth-of-type(3),
+  /* any following article will mark the product page link (2). product details pages. */
+  &:has(main > article:nth-of-type(n+4):target) nav a:nth-of-type(2),
+  /* no active target: first link active. */
+  &:not(:has(main > article:target)) nav a:nth-of-type(1) {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  /* unmark second link (products) when last article is active (checkout page) */
+  &:has(main > article:nth-last-of-type(1):target) nav a:nth-of-type(2) {
+    text-decoration: none;
+  }
+}
+
+/*premade block for auto-hiding header, works only on chromium based browsers*/
+html {
+  container-type: scroll-state;
+
+  header {
+    inset-block-start: 0;
+    transition: translate .3s;
+  }
+
+  @container scroll-state(scrolled: block-end) {
+    header:not(:focus-within) {
+      translate: 0 -100%;
+    }
+  }
+}
+
+
+header {
+  .header-nav {
+    clear: both;
+    background-color: #fff;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 10px;
+  }
+
+  h1 {
+    float: left;
+  }
+
+  nav {
+    clear: both;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      padding: 10px;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}
+
+/* logic for the cart panel */
+.cart-btn {
+  padding: 8px 8px 5px 5px;
+  margin: 17px 15px 15px;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+#cart-control {
+  height: 0;
+  width: 0;
+  position: fixed;
+  top: 35px;
+  right: max(52px, (100% - 1080px) / 2 + 32px);
+  cursor: pointer;
+}
+
+.cart-background {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* when input#cart-control is checked, show cart-background */
+#cart-control:checked+div.cart-background {
+  display: block;
+
+}
+
+.cart-background-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-close-button {
+  margin-top: -5px;
+  float: right;
+  font-size: small;
+  color: #888;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.cart-container {
+  position: fixed;
+  bottom: 100%;
+  right: max(30px, (100% - 1060px) / 2);
+  transition: translate .3s;
+  margin-left: 10px;
+
+  @media(width <768px) {
+    left: 0;
+    right: 0;
+    margin-left: 0;
+  }
+
+  /* styling of cart */
+  clear: both;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+
+  h2 {
+    margin-top: 0px;
+    float: left;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
+
+main {
+  background-color: #fff;
+  /* set main's min-height to viewport height - header height - footer height */
+  min-height: calc(100vh - 155px);
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto 0;
+  padding: 100px 10px 0;
+
+  article {
+    background-color: #fff;
+  }
+}
+
+.content {
+  padding: 50px 50px;
+
+  >img,
+  >section>img {
+    width: 90%;
+    margin: 10px;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+h2.title {
+  margin-top: 0;
+}
+
+/* clear float */
+.clear {
+  clear: both;
+}
+
+.product-container {
+  .product {
+    width: 20%;
+    aspect-ratio: 18 / 21;
+    padding: 15px;
+    float: left;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid #d9d9d9;
+
+    @media(width <1120px) {
+      width: 25%;
+    }
+
+    @media(width <992px) {
+      width: 33%;
+    }
+
+    @media(width <768px) {
+      width: 50%;
+    }
+
+    @media(width <576px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: #f2f2f2;
+
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin: 0 0 -3px;
+      float: left;
+    }
+
+    p {
+      margin: 3px 10px -1em;
+      float: right;
+    }
+  }
+}
+
+.product-page {
+  img {
+    height: 400px;
+    width: auto
+  }
+
+  input {
+    text-align: center;
+    field-sizing: content;
+    min-width: 30px;
+
+    &::-webkit-inner-spin-button {
+      opacity: 1;
+    }
+  }
+}
+
+footer {
+  background-color: #666;
+  border-top: 1px solid #d9d9d9;
+  height: 155px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.footer-content {
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0;
+
+  a,
+  p {
+    color: #fff;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .copyright {
+    color: #333;
   }
 }
 
 // The cart markup is generated by fe26-shop.js and has no Bootstrap classes.
 // Instead of changing the JS we give it Bootstrap's look with @extend:
 // "this selector should look like that Bootstrap class".
+
+.cart-container {
+  position: fixed;
+  bottom: 100%;
+  right: max(30px, (100% - 1060px) / 2);
+  transition: translate .3s;
+  margin-left: 10px;
+
+  @media(width <768px) {
+    left: 0;
+    right: 0;
+    margin-left: 0;
+  }
+
+  /* styling of cart */
+  clear: both;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+
+  h2 {
+    margin-top: 0px;
+    float: left;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+
+
+  button.empty-cart {
+    /*  position: relative;
+    top: -25px;
+    left: 2px; */
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  p.empty {
+    color: #888;
+  }
+}
+
+/* when input#cart-control is checked, translate (move) cart-container into view */
+#cart-control:checked+div.cart-background+div.cart-container {
+  translate: 0 calc(100% + 10px);
+
+  @media(width <768px) {
+    translate: 0 100%;
+  }
+}
+
 .cart {
+  clear: both;
+
   table {
-    @extend .table, .table-sm, .align-middle;
-  }
+    border-collapse: collapse;
 
-  // prices and sums to the right
-  td:nth-of-type(2),
-  td:nth-of-type(4),
-  tfoot th {
-    @extend .text-end;
-  }
+    @media(width <768px) {
+      width: 100%;
+    }
 
-  // the quantity input + "st"
-  td:nth-of-type(3) {
-    @extend .text-end;
-    white-space: nowrap;
-  }
+    tr {
+      background-color: #fff;
 
-  input {
-    @extend .form-control, .form-control-sm, .d-inline-block;
-    width: 4.5em;
-  }
+    }
 
-  .remove {
-    @extend .btn, .btn-sm, .btn-outline-danger;
-  }
+    td {
+      padding: 10px;
+      hyphens: auto;
 
-  .empty-cart {
-    @extend .btn, .btn-sm, .btn-outline-secondary;
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        text-align: right;
+        text-wrap: nowrap;
+      }
+
+      input {
+        text-align: center;
+        field-sizing: content;
+        min-width: 30px;
+
+        &::-webkit-inner-spin-button {
+          opacity: 1;
+        }
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid #000;
+
+      tr:nth-child(even) {
+        background-color: #f7f7f7;
+      }
+    }
+
+    tfoot {
+
+      th {
+        padding-top: 10px;
+        padding-right: 8px;
+        text-align: right;
+      }
+
+      tr:nth-child(2) th {
+        padding-top: 0;
+        color: #888;
+        font-size: small;
+      }
+
+      tr:nth-child(2) th:nth-child(2) {
+        padding-right: 11px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
   }
+}
+
+.cart-checkout-button {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 20px;
+  float: right;
+  cursor: pointer;
+
+  label {
+    padding: 1px 6px;
+    cursor: pointer;
+  }
+}
+
+/* Hide checkout button when "cart is empty" (.cart contains no table) */
+.cart:not(:has(table))+button.cart-checkout-button {
+  display: none;
 }
