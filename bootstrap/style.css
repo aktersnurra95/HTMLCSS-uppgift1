@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+/*premade block for auto-hiding header, works only on chromium based browsers*/
+html {
+  container-type: scroll-state;
+
+  header {
+    inset-block-start: 0;
+    transition: translate .3s;
+  }
+
+  @container scroll-state(scrolled: block-end) {
+    header:not(:focus-within) {
+      translate: 0 -100%;
+    }
+  }
+}
+
 body {
   margin: 0;
   font-family: verdana;
@@ -57,27 +73,15 @@ header {
       }
     }
   }
-
-  /* old cart
-  details {
-    position: absolute;
-    right: 20px;
-
-    summary {
-      text-align: right;
-      padding: 20px;
-    }
-  }
-    */
 }
 
 main {
   background-color: #fff;
   /* set main's min-height to viewport height - header height - footer height */
-  min-height: calc(100vh - 122px - 155px);
+  min-height: calc(100vh - 155px);
   width: min(100% - 40px, 1080px);
-  margin: 122px auto 0;
-  padding: 0 10px;
+  margin: 0 auto 0;
+  padding: 100px 10px 0;
 
   article {
     background-color: #fff;
@@ -198,21 +202,5 @@ footer {
 
   .copyright {
     color: #333;
-  }
-}
-
-/*premade block for auto-hiding header, works only on chromium based browsers*/
-html {
-  container-type: scroll-state;
-
-  header {
-    inset-block-start: 0;
-    transition: translate .3s;
-  }
-
-  @container scroll-state(scrolled: block-end) {
-    header:not(:focus-within) {
-      translate: 0 -100%;
-    }
   }
 }
