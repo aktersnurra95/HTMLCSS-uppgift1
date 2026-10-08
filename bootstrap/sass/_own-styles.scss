@@ -354,7 +354,6 @@ footer {
 }
 
 .cart {
-  clear: both;
 
   table {
     border-collapse: collapse;
@@ -423,19 +422,6 @@ footer {
       -webkit-user-select: none;
       -ms-user-select: none;
     }
-  }
-}
-
-.cart-checkout-button {
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 20px;
-  float: right;
-  cursor: pointer;
-
-  label {
-    padding: 1px 6px;
-    cursor: pointer;
   }
 }
 

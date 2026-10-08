@@ -4,4 +4,4 @@ import { Offcanvas } from 'bootstrap';
 import './fe26-shop.js';
 
 // Following a link inside the cart (#checka-ut) should close the cart
-addEventListener('hashchange', () => Offcanvas.getInstance('#varukorg')?.hide());
+addEventListener('hashchange', () => Offcanvas.getInstance('#cartPanel')?.hide());
