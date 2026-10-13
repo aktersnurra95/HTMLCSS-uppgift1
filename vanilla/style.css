@@ -81,10 +81,23 @@ main {
   min-height: calc(100vh - 155px);
   width: min(100% - 40px, 1080px);
   margin: 0 auto 0;
-  padding: 100px 10px 0;
+  padding: 110px 10px 0;
 
   article {
     background-color: #fff;
+  }
+}
+
+.return-link {
+  position: relative;
+  top: 32px;
+  left: 20px;
+  text-decoration: none;
+  font-size: small;
+  color: #666;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
