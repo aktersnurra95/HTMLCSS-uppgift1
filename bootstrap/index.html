@@ -8,46 +8,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="bg-body-secondary d-flex flex-column min-vh-100">
 
   <!--HEADER, NAVIGATION AND CART BUTTON-->
-  <header class="fixed-top bg-white border-bottom shadow-sm">
-    <div class="header-content container d-flex justify-content-between align-items-center py-2">
+  <header class="fixed-top bg-white border-bottom shadow-sm bg-body-secondary">
+    <div class="header-content container-lg d-flex justify-content-between align-items-center py-0">
       <a href="index.html" class="navbar-brand">
-        <img src="images/logo.png" class="logo" height="70" alt="Gurkans webbshop logga">
+        <img src="images/logo.png" class="logo my-1" height="70" alt="Gurkans webbshop logga">
       </a>
-      <button class="cart-btn btn btn-light btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><img src="images/cart.png" height="30" alt="Varukorg"></button>
+      <button class="cart-btn btn btn-light border-secondary-subtle" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><img src="images/cart.png" height="30" alt="Varukorg"></button>
     </div>
-    <div class="header-nav">
-      <nav class="header-content">
-        <a href="#start">Hem</a>
-        <a href="#produkter">Produkter</a>
-        <a href="#om-oss">Om oss</a>
+    <div class="header-nav bg-white border-top">
+      <nav class="header-content container-lg d-flex justify-content-start align-items-center">
+        <a href="#start" class="p-2 text-decoration-none text-black">Hem</a>
+        <a href="#produkter" class="p-2 text-decoration-none text-black">Produkter</a>
+        <a href="#om-oss" class="p-2 text-decoration-none text-black">Om oss</a>
       </nav>
     </div>
   </header>
 
-  <!--CART PANEL-->
+  <!--CART PANEL (OFFCANVAS)-->
   <aside>
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="cartPanel" aria-labelledby="cartPanelLabel">
-      <div class="offcanvas-header">
+      <div class="offcanvas-header pb-0">
         <h5 class="offcanvas-title" id="cartPanelLabel">Varukorg</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <div class="cart"></div>
-        <button type="button" class="cart-checkout-button btn btn-light btn-outline-dark float-end" onclick="location.href='#kassa'">Gå till kassan</button>
+        <button type="button" class="cart-checkout-btn btn btn-light border-secondary-subtle float-end" onclick="location.href='#kassa'">Gå till kassan</button>
       </div>
     </div>
 
     </div>
   </aside>
 
-  <main>
+  <main class="flex-fill container-lg bg-white">
 
     <!--DEFAULT PAGE-->
     <article id="start">
-      <div class="content">
+      <div class="content p-5">
         <h2 class="title">Välkommen till Gurkans Webbshop!</h2>
         <p>Vi är otroligt glada att du har hittat hit. Hos oss kliver du in i ett handplockat och fascinerande utbud där gränserna mellan naturens egna underverk, sprudlande livskraft och hemmets mest effektiva vardagslösningar suddas ut. Vår filosofi är enkel: vi vill erbjuda unika produkter som tillför mervärde, energi, funktion och glädje i varje hörn av ditt liv.</p>
         <p>Oavsett om du söker efter någonting som förvandlar ditt hem till en livfull oas, ett naturligt energitillskott som håller dig igång under tunga arbetsdagar, eller moderna redskap som gör det tråkiga städarbetet till en ren fröjd, så har vi någonting speciellt anpassat för dig. Vi tror på kvalitet, mångsidighet och framför allt på idén om att varje produkt bär på sin egen unika historia och karaktär.</p>
@@ -55,13 +55,13 @@
           <h3>Handplockade Favoriter för Alla Tillfällen</h3>
           <p>I vårt noggrant sammansatta sortiment möts det överraskande och det självklara. Här hittar du allt från levande följeslagare som sprider rörelse, charm och ett lugnande sken i din omgivning, till biologiska energikällor och naturliga råvaror som ger både kroppen och matlagningen en välbehövlig boost. Vi erbjuder även ståtliga inslag för grönskande utemiljöer som växer och skapar värde över generationer, sida vid sida med modern och tystgående hushållsteknik som håller ditt hem fläckfritt och fräscht.</p>
           <p>Gemensamt för allt du finner hos oss är fokuset på kvalitet, funktion och en stark personlighet. Vi tror inte på ett enformigt liv, utan strävar efter att erbjuda produkter som väcker nyfikenhet, underlättar din vardag och förvandlar varje rum eller trädgård till en mer inspirerande plats att vara på.</p>
-          <a href="#produkter">Till produktsidan</a>
+          <p><a href="#produkter">Till produktsidan</a></p>
         </section>
         <section>
           <h3>Varför Handla Hos Oss?</h3>
           <p>Vi strävar alltid efter att kombinera funktion, estetik och hållbarhet. När du handlar hos oss kan du vara säker på att du får produkter som noggrant valts ut för att möta höga krav på både prestanda och upplevelse. Vi erbjuder dessutom snabba leveranser, trygg e-handel och en kundtjänst som alltid står redo att hjälpa dig att hitta rätt val för just dina behov.</p>
           <p>Vi tror inte på ett enformigt liv – vi tror på en färgstark mix av nyfikenhet, funktion och estetik. Ta dig tid att utforska vårt sortiment, läs de detaljerade specifikationerna och låt dig inspireras av produkter som inte liknar något annat du tidigare skådat.</p>
-          <a href="#om-oss">Läs mer om oss här</a>
+          <p><a href="#om-oss">Läs mer om oss här</a></p>
         </section>
         <p><em>Varmt välkommen att starta din upptäcktsfärd hos oss redan idag – vi har någonting unikt för varje tillfälle, rum och miljö!</em></p>
 
@@ -71,11 +71,10 @@
 
     <!--PRODUCTS-->
     <article id="produkter">
-      <div class="content">
-        <h2 class="title">Produkter</h2>
-        <div class="product-container">
+      <div class="content p-5">
+        <div class="product-container row row-cols-5">
 
-          <a href="#produkter/apa">
+          <a href="#produkter/apa" class="col">
             <section class="product">
               <img src="images/apa.jpg" alt="Apa">
               <h3>Apa</h3>
@@ -83,7 +82,7 @@
             </section>
           </a>
 
-          <a href="#produkter/banan">
+          <a href="#produkter/banan" class="col">
             <section class="product">
               <img src="images/banan.jpg" alt="Banan">
               <h3>Banan</h3>
@@ -91,7 +90,7 @@
             </section>
           </a>
 
-          <a href="#produkter/citron">
+          <a href="#produkter/citron" class="col">
             <section class="product">
               <img src="images/citron.jpg" alt="Citron">
               <h3>Citron</h3>
@@ -99,7 +98,7 @@
             </section>
           </a>
 
-          <a href="#produkter/dammsugare">
+          <a href="#produkter/dammsugare" class="col">
             <section class="product">
               <img src="images/dammsugare.jpg" alt="Dammsugare">
               <h3>Dammsugare</h3>
@@ -107,7 +106,7 @@
             </section>
           </a>
 
-          <a href="#produkter/ek">
+          <a href="#produkter/ek" class="col">
             <section class="product">
               <img src="images/ek.jpg" alt="Ek">
               <h3>Ek</h3>
@@ -115,7 +114,7 @@
             </section>
           </a>
 
-          <a href="#produkter/fisk">
+          <a href="#produkter/fisk" class="col">
             <section class="product">
               <img src="images/fisk.jpg" alt="Fisk">
               <h3>Fisk</h3>
@@ -123,7 +122,7 @@
             </section>
           </a>
 
-          <a href="#produkter/gustav">
+          <a href="#produkter/gustav" class="col">
             <section class="product">
               <img src="images/gustav.jpg" alt="Gustav">
               <h3>Gustav</h3>
@@ -131,7 +130,7 @@
             </section>
           </a>
 
-          <a href="#produkter/helikopter">
+          <a href="#produkter/helikopter" class="col">
             <section class="product">
               <img src="images/helikopter.jpg" alt="Helikopter">
               <h3>Helikopter</h3>
@@ -139,7 +138,7 @@
             </section>
           </a>
 
-          <a href="#produkter/isbit">
+          <a href="#produkter/isbit" class="col">
             <section class="product">
               <img src="images/isbit.jpg" alt="Isbit">
               <h3>Isbit</h3>
@@ -147,7 +146,7 @@
             </section>
           </a>
 
-          <a href="#produkter/jojo">
+          <a href="#produkter/jojo" class="col">
             <section class="product">
               <img src="images/jojo.jpg" alt="Jojo">
               <h3>Jojo</h3>
@@ -155,7 +154,7 @@
             </section>
           </a>
 
-          <a href="#produkter/kanelbulle">
+          <a href="#produkter/kanelbulle" class="col">
             <section class="product">
               <img src="images/kanelbulle.jpg" alt="Kanelbulle">
               <h3>Kanelbulle</h3>
@@ -163,7 +162,7 @@
             </section>
           </a>
 
-          <a href="#produkter/lorem">
+          <a href="#produkter/lorem" class="col">
             <section class="product">
               <img src="images/lorem.png" alt="Lorem">
               <h3>Lorem</h3>
@@ -177,7 +176,7 @@
 
     <!--ABOUT PAGE-->
     <article id="om-oss">
-      <div class="content">
+      <div class="content p-5">
         <h2 class="title">Vad är Gurkans?</h2>
         <p>Vi grundades ur en enkel men stark idé: att bryta mönstret för traditionella webbshoppar genom att samla det allra bästa från naturens fantastiska mångfald och hemmets smidiga lösningar under ett och samma tak. Hos oss möts passionen för det levande och unika med drivkraften att skapa en enklare, härligare och mer inspirerande vardag.</p>
         <img src="images/om-oss.jpg" alt="">
@@ -204,7 +203,7 @@
     <!--PRODUCT PAGES-->
     <article id="produkter/apa" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/apa.jpg" alt="">
         <h2>Apa</h2>
         <p class="product-price"></p>
@@ -236,7 +235,7 @@
 
     <article id="produkter/banan" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/banan.jpg" alt="">
         <h2>Banan</h2>
         <form data-label="Banan" data-price="20">
@@ -268,7 +267,7 @@
 
     <article id="produkter/citron" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/citron.jpg" alt="">
         <h2>Citron</h2>
         <form data-label="Citron" data-price="10">
@@ -300,7 +299,7 @@
 
     <article id="produkter/dammsugare" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/dammsugare.jpg" alt="">
         <h2>Dammsugare</h2>
         <form data-label="Dammsugare" data-price="900">
@@ -332,7 +331,7 @@
 
     <article id="produkter/ek" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/ek.jpg" alt="">
         <h2>Ek</h2>
         <form data-label="Ek" data-price="1120">
@@ -364,7 +363,7 @@
 
     <article id="produkter/fisk" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/fisk.jpg" alt="">
         <h2>Fisk</h2>
         <form data-label="Fisk" data-price="300">
@@ -396,7 +395,7 @@
 
     <article id="produkter/gustav" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/gustav.jpg" alt="">
         <h2>Gustav</h2>
         <form data-label="Gustav" data-price="951106">
@@ -428,7 +427,7 @@
 
     <article id="produkter/helikopter" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/helikopter.jpg" alt="">
         <h2>Helikopter</h2>
         <form data-label="Helikopter" data-price="180000">
@@ -461,7 +460,7 @@
 
     <article id="produkter/isbit" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/isbit.jpg" alt="">
         <h2>Isbit (1st)</h2>
         <form data-label="Isbit" data-price="1">
@@ -494,7 +493,7 @@
 
     <article id="produkter/jojo" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/jojo.jpg" alt="">
         <h2>Jojo</h2>
         <form data-label="Jojo" data-price="260">
@@ -526,7 +525,7 @@
 
     <article id="produkter/kanelbulle" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
-      <div class="content">
+      <div class="content p-5">
         <img src="images/kanelbulle.jpg" alt="">
         <h2>Kanelbulle</h2>
         <form data-label="Kanelbulle" data-price="36">
@@ -557,7 +556,7 @@
     </article>
 
     <article id="produkter/lorem" class="product-page">
-      <div class="content">
+      <div class="content p-5">
         <img src="images/lorem.png" alt="">
         <h2>Lorem</h2>
         <form data-label="Lorem" data-price="1234567890">
@@ -590,27 +589,49 @@
 
     <!--CHECKOUT PAGE-->
     <article id="kassa">
-      <div class="content">
+      <div class="content p-5">
         <h2 class="title">Kassan</h2>
-        <form autocomplete="on">
-          <fieldset>
-            <legend>Leveransuppgifter</legend>
-            <label>Förnamn:<br><input type="text" name="firstName" size="30" required><br></label>
-            <label>Efternamn:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Gatuadress:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Postnummer:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Postort:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>E-post:<br><input type="email" name="email" size="30" placeholder="example@email.com" required><br></label>
-            <label>Fraktalternativ:<br>
-              <select size="5" required>
-                <option>PostNord</option>
+        <form class="needs-validation">
+          <div class="form-floating mb-3">
+            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Förnamn" required>
+            <label for="firstName">Förnamn</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Efternamn" required>
+            <label>Efternamn</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" name="streetAddress" id="streetAddress" class="form-control" placeholder="Gatuadress" required>
+            <label>Gatuadress</label>
+          </div>
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <input type="text" name="postalCode" id="postalCode" class="form-control" placeholder="Postkod" required>
+              <label>Postnummer</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" name="postalArea" id="postalArea" class="form-control" placeholder="Postort" required>
+              <label>Postort</label>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" name="email" id="email" class="form-control" placeholder="example@email.com" required>
+            <label>E-post</label>
+          </div>
+          <div class="input-group mb-3">
+            <select name="shipping" class="form-select" id="shipping" multiple required>
+              <optgroup label="Fraktalternativ">
+                <option selected>PostNord</option>
                 <option>DHL</option>
                 <option>Schenker</option>
-              </select><br>
-            </label>
-            <label>Frågor/kommentarer:<br><textarea name="comments"></textarea><br></label>
-            <button type="submit">Avsluta köpet</button>
-          </fieldset>
+              </optgroup>
+            </select>
+            <div class="form-floating">
+              <textarea name="comments" id="comments" class="form-control" placeholder="Frågor/kommentarer" style="min-height: 100px;"></textarea>
+              <label>Frågor/kommentarer</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-light border-secondary-subtle">Avsluta köpet</button>
         </form>
       </div>
     </article>
@@ -618,12 +639,12 @@
   </main>
 
   <!--FOOTER-->
-  <footer>
-    <div class="footer-content">
+  <footer class="bg-secondary">
+    <div class="footer-content container-lg">
       <a href="index.html">
-        <img src="images/logo-inverted.png" class="logo" alt="Gurkans webbshop logga">
+        <img src="images/logo-inverted.png" class="m-2" height="60" alt="Gurkans webbshop logga">
       </a>
-      <p class="copyright">Copyright &copy; 2026 Gurkan AB</p>
+      <p class="text-secondary-emphasis mb-2">Copyright &copy; 2026 Gurkan AB</p>
     </div>
   </footer>
 

@@ -28,13 +28,13 @@ body {
   &:has(main > article:nth-of-type(n+4):target) nav a:nth-of-type(2),
   /* no active target: first link active. */
   &:not(:has(main > article:target)) nav a:nth-of-type(1) {
-    text-decoration: underline;
+    text-decoration: underline !important;
     text-underline-offset: 6px;
   }
 
   /* unmark second link (products) when last article is active (checkout page) */
   &:has(main > article:nth-last-of-type(1):target) nav a:nth-of-type(2) {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 
@@ -54,131 +54,96 @@ html {
   }
 }
 
+header nav a:hover {
+  background-color: #f2f2f2;
+}
 
-header {
-  .header-nav {
-    clear: both;
-    background-color: #fff;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
-    padding: 10px;
-  }
 
-  h1 {
-    float: left;
-  }
+main {
+  padding-top: 110px;
+}
 
-  nav {
-    clear: both;
+.cart-btn {
+  padding: 8px 8px 5px 5px;
+}
 
-    a {
-      color: #000;
-      text-decoration: none;
-      padding: 10px;
+.offcanvas {
+  min-width: 400px;
+  width: fit-content !important;
+}
 
-      &:hover {
-        background-color: #f2f2f2;
+.cart {
+  table {
+    @extend .table, .align-middle, .table-striped, .table-borderless;
+
+    td {
+
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        @extend .text-end, .text-nowrap;
       }
+
+      input {
+        field-sizing: content;
+        min-width: 35px;
+
+        &::-webkit-inner-spin-button {
+          @extend .opacity-100;
+        }
+      }
+    }
+
+    tfoot {
+      @extend .border-top, .border-black;
+
+      th {
+        @extend .text-end, .pb-0;
+      }
+
+      tr:nth-child(2) th {
+        @extend .pt-0, .text-body-tertiary, .small;
+      }
+
+      tr:nth-child(2) th:nth-child(2) {
+        @extend .pe-2;
+      }
+    }
+  }
+
+  button {
+    @extend .btn, .btn-light, .border-secondary-subtle;
+
+    &.remove {
+      @extend .btn-sm;
+    }
+
+    &.empty-cart {
+      @extend .float-start;
     }
   }
 }
 
-/* logic for the cart panel */
-.cart-btn {
-  padding: 8px 8px 5px 5px;
-  margin: 17px 15px 15px;
-
-  &:hover {
-    background-color: #f2f2f2;
-  }
+/* Hide checkout button when "cart is empty" (.cart contains no table) */
+.cart:not(:has(table))+button.cart-checkout-btn {
+  @extend .d-none;
 }
 
-#cart-control {
-  height: 0;
-  width: 0;
-  position: fixed;
-  top: 35px;
-  right: max(52px, (100% - 1080px) / 2 + 32px);
-  cursor: pointer;
-}
-
-.cart-background {
-  display: none;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* when input#cart-control is checked, show cart-background */
-#cart-control:checked+div.cart-background {
-  display: block;
-
-}
-
-.cart-background-button {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.cart-close-button {
-  margin-top: -5px;
-  float: right;
+.return-link {
+  position: relative;
+  top: 32px;
+  left: 20px;
+  text-decoration: none;
   font-size: small;
-  color: #888;
-  cursor: pointer;
+  color: #666;
 
   &:hover {
-    color: #000;
-  }
-}
-
-.cart-container {
-  position: fixed;
-  bottom: 100%;
-  right: max(30px, (100% - 1060px) / 2);
-  transition: translate .3s;
-  margin-left: 10px;
-
-  @media(width <768px) {
-    left: 0;
-    right: 0;
-    margin-left: 0;
-  }
-
-  /* styling of cart */
-  clear: both;
-  padding: 20px;
-  border: 1px solid #000;
-  background-color: #fff;
-
-  h2 {
-    margin-top: 0px;
-    float: left;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-}
-
-main {
-  background-color: #fff;
-  /* set main's min-height to viewport height - header height - footer height */
-  min-height: calc(100vh - 155px);
-  width: min(100% - 40px, 1080px);
-  margin: 0 auto 0;
-  padding: 100px 10px 0;
-
-  article {
-    background-color: #fff;
+    text-decoration: underline;
   }
 }
 
 .content {
-  padding: 50px 50px;
 
   >img,
   >section>img {
@@ -195,36 +160,16 @@ h2.title {
   margin-top: 0;
 }
 
-/* clear float */
-.clear {
-  clear: both;
+.col {
+  width: 172px;
 }
 
 .product-container {
   .product {
-    width: 20%;
-    aspect-ratio: 18 / 21;
-    padding: 15px;
     float: left;
     background-color: #fff;
     color: #000;
     border-bottom: 1px solid #d9d9d9;
-
-    @media(width <1120px) {
-      width: 25%;
-    }
-
-    @media(width <992px) {
-      width: 33%;
-    }
-
-    @media(width <768px) {
-      width: 50%;
-    }
-
-    @media(width <576px) {
-      width: 100%;
-    }
 
     &:hover {
       background-color: #f2f2f2;
@@ -232,7 +177,8 @@ h2.title {
     }
 
     img {
-      width: 100%;
+      margin: auto;
+      height: 145px;
       aspect-ratio: 1 / 1;
       object-fit: cover;
     }
@@ -266,166 +212,15 @@ h2.title {
   }
 }
 
-footer {
-  background-color: #666;
-  border-top: 1px solid #d9d9d9;
-  height: 155px;
-  width: 100%;
-  min-width: 300px;
-}
-
-.footer-content {
-  width: min(100% - 40px, 1080px);
-  margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 0;
-
-  a,
-  p {
-    color: #fff;
+select {
+  optgroup {
+    color: rgba(33, 37, 41, 0.65);
+    font-weight: normal;
+    font-size: 13.6px;
   }
 
-  .logo {
-    height: 70px;
+  option {
+    color: initial;
+    font-size: initial;
   }
-
-  .copyright {
-    color: #333;
-  }
-}
-
-// The cart markup is generated by fe26-shop.js and has no Bootstrap classes.
-// Instead of changing the JS we give it Bootstrap's look with @extend:
-// "this selector should look like that Bootstrap class".
-
-.cart-container {
-  position: fixed;
-  bottom: 100%;
-  right: max(30px, (100% - 1060px) / 2);
-  transition: translate .3s;
-  margin-left: 10px;
-
-  @media(width <768px) {
-    left: 0;
-    right: 0;
-    margin-left: 0;
-  }
-
-  /* styling of cart */
-  clear: both;
-  padding: 20px;
-  border: 1px solid #000;
-  background-color: #fff;
-
-  h2 {
-    margin-top: 0px;
-    float: left;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-
-
-  button.empty-cart {
-    /*  position: relative;
-    top: -25px;
-    left: 2px; */
-    margin-top: 20px;
-    float: left;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  p.empty {
-    color: #888;
-  }
-}
-
-/* when input#cart-control is checked, translate (move) cart-container into view */
-#cart-control:checked+div.cart-background+div.cart-container {
-  translate: 0 calc(100% + 10px);
-
-  @media(width <768px) {
-    translate: 0 100%;
-  }
-}
-
-.cart {
-
-  table {
-    border-collapse: collapse;
-
-    @media(width <768px) {
-      width: 100%;
-    }
-
-    tr {
-      background-color: #fff;
-
-    }
-
-    td {
-      padding: 10px;
-      hyphens: auto;
-
-      &:nth-of-type(2),
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        text-align: right;
-        text-wrap: nowrap;
-      }
-
-      input {
-        text-align: center;
-        field-sizing: content;
-        min-width: 30px;
-
-        &::-webkit-inner-spin-button {
-          opacity: 1;
-        }
-      }
-    }
-
-    tbody {
-      border-bottom: 1px solid #000;
-
-      tr:nth-child(even) {
-        background-color: #f7f7f7;
-      }
-    }
-
-    tfoot {
-
-      th {
-        padding-top: 10px;
-        padding-right: 8px;
-        text-align: right;
-      }
-
-      tr:nth-child(2) th {
-        padding-top: 0;
-        color: #888;
-        font-size: small;
-      }
-
-      tr:nth-child(2) th:nth-child(2) {
-        padding-right: 11px;
-      }
-    }
-
-    button {
-      cursor: pointer;
-      user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-    }
-  }
-}
-
-/* Hide checkout button when "cart is empty" (.cart contains no table) */
-.cart:not(:has(table))+button.cart-checkout-button {
-  display: none;
 }
