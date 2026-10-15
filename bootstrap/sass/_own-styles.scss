@@ -58,7 +58,6 @@ header nav a:hover {
   background-color: #f2f2f2;
 }
 
-
 main {
   padding-top: 110px;
 }
@@ -86,8 +85,8 @@ main {
       }
 
       input {
-        field-sizing: content;
         min-width: 35px;
+        field-sizing: content;
 
         &::-webkit-inner-spin-button {
           @extend .opacity-100;
@@ -132,7 +131,7 @@ main {
 
 .return-link {
   position: relative;
-  top: 32px;
+  top: 28px;
   left: 20px;
   text-decoration: none;
   font-size: small;
@@ -143,74 +142,32 @@ main {
   }
 }
 
-.content {
-
-  >img,
-  >section>img {
-    width: 90%;
-    margin: 10px;
-  }
-
-  li {
-    list-style: none;
-  }
-}
-
-h2.title {
-  margin-top: 0;
-}
-
-.col {
-  width: 172px;
-}
-
 .product-container {
-  .product {
-    float: left;
-    background-color: #fff;
+  a {
+    text-decoration: none;
     color: #000;
-    border-bottom: 1px solid #d9d9d9;
-
-    &:hover {
-      background-color: #f2f2f2;
-
-    }
-
-    img {
-      margin: auto;
-      height: 145px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
-
-    h3 {
-      margin: 0 0 -3px;
-      float: left;
-    }
-
-    p {
-      margin: 3px 10px -1em;
-      float: right;
-    }
   }
-}
 
-.product-page {
   img {
-    height: 400px;
-    width: auto
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 
-  input {
-    text-align: center;
-    field-sizing: content;
-    min-width: 30px;
-
-    &::-webkit-inner-spin-button {
-      opacity: 1;
-    }
+  .product:hover {
+    background-color: #f2f2f2;
   }
 }
+
+.product-page input {
+  text-align: center;
+  min-width: 35px;
+  field-sizing: content;
+
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+}
+
 
 select {
   optgroup {
