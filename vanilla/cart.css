@@ -68,7 +68,7 @@
   transition: translate .3s;
   margin-left: 10px;
 
-  @media(width <768px) {
+  @media (width <768px) {
     left: 0;
     right: 0;
     margin-left: 0;
@@ -91,7 +91,7 @@
   table {
     border-collapse: collapse;
 
-    @media(width <768px) {
+    @media (width <768px) {
       width: 100%;
     }
 
@@ -196,7 +196,7 @@
 #cart-control:checked+div.cart-background+div.cart-container {
   translate: 0 calc(100% + 10px);
 
-  @media(width <768px) {
+  @media (width <768px) {
     translate: 0 100%;
   }
 }

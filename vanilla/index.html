@@ -596,24 +596,48 @@
     <article id="kassa">
       <div class="content">
         <h2 class="title">Kassan</h2>
-        <form autocomplete="on">
+        <form>
           <fieldset>
             <legend>Leveransuppgifter</legend>
-            <label>Förnamn:<br><input type="text" name="firstName" size="30" required><br></label>
-            <label>Efternamn:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Gatuadress:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Postnummer:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>Postort:<br><input type="text" name="lastName" size="30" required><br></label>
-            <label>E-post:<br><input type="email" name="email" size="30" placeholder="example@email.com" required><br></label>
-            <label>Fraktalternativ:<br>
-              <select size="5" required>
+            <div class="form-item">
+              <label for="firstName">Förnamn:</label>
+              <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="form-item">
+              <label for="lastName">Efternamn:</label>
+              <input type="text" name="lastName" id="lastName" required>
+            </div>
+            <div class="form-item full">
+              <label for="streetAddress">Gatuadress:</label>
+              <input type="text" name="streetAddress" id="streetAddress" required>
+            </div>
+            <div class="form-item short">
+              <label for="postalCode">Postnummer:</label>
+              <input type="text" name="postalCode" id="postalCode" required>
+            </div>
+            <div class="form-item long">
+              <label for="PostalArea">Ort:</label>
+              <input type="text" name="PostalArea" id="PostalArea" required>
+            </div>
+            <div class="form-item full">
+              <label for="email">E-post:</label>
+              <input type="email" name="email" id="email" placeholder="example@email.com" required>
+            </div>
+            <div class="form-item short">
+              <label for="shipping">Fraktalternativ:</label>
+              <select name="shipping" id="shipping" size="2" required>
                 <option>PostNord</option>
                 <option>DHL</option>
                 <option>Schenker</option>
-              </select><br>
-            </label>
-            <label>Frågor/kommentarer:<br><textarea name="comments"></textarea><br></label>
-            <button type="submit">Avsluta köpet</button>
+              </select>
+            </div>
+            <div class="form-item long">
+              <label for="comments">Frågor/kommentarer:</label>
+              <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div class="form-item clear">
+              <button type="submit">Avsluta köpet</button>
+            </div>
           </fieldset>
         </form>
       </div>

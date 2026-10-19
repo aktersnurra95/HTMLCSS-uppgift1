@@ -104,10 +104,14 @@ main {
 .content {
   padding: 50px 50px;
 
+  @media (width <768px) {
+    padding: 50px 20px;
+  }
+
   >img,
   >section>img {
-    width: 90%;
-    margin: 10px;
+    width: 100%;
+    margin: 5px 0;
   }
 
   li {
@@ -134,20 +138,22 @@ h2.title {
     color: #000;
     border-bottom: 1px solid #d9d9d9;
 
-    @media(width <1120px) {
+    @media (width <1120px) {
       width: 25%;
     }
 
-    @media(width <992px) {
+    @media (width <992px) {
       width: 33%;
     }
 
-    @media(width <768px) {
+    @media (width <768px) {
       width: 50%;
+      aspect-ratio: 18 / 20.5;
     }
 
-    @media(width <576px) {
+    @media (width <576px) {
       width: 100%;
+      aspect-ratio: 18 / 19;
     }
 
     &:hover {
@@ -175,8 +181,10 @@ h2.title {
 
 .product-page {
   img {
-    height: 400px;
-    width: auto
+    max-height: 400px;
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
   }
 
   input {
@@ -187,6 +195,58 @@ h2.title {
     &::-webkit-inner-spin-button {
       opacity: 1;
     }
+  }
+}
+
+.form-item {
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+  padding-bottom: 5px;
+
+  &.short {
+    width: 30%;
+
+    @media (width <768px) {
+      width: 40%;
+    }
+  }
+
+  &.long {
+    width: 70%;
+
+    @media (width <768px) {
+      width: 60%;
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+  }
+
+  select,
+  textarea {
+    width: 100%;
+    height: 66px;
+  }
+
+  @media (width <576px) {
+    float: none;
+    width: 100% !important;
+  }
+
+  &:nth-last-of-type(1) {
+    margin-top: 8px;
   }
 }
 
