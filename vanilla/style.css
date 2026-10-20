@@ -1,6 +1,15 @@
 @import "cart.css";
 @import "navigation.css";
 
+:root {
+  --main-bg-color: #f2f2f2;
+  --content-bg-color: #fff;
+  --hover-color: #f2f2f2;
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+  --border-color-light: #d9d9d9;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -24,7 +33,7 @@ html {
 body {
   margin: 0;
   font-family: verdana;
-  background-color: #f2f2f2;
+  background-color: var(--main-bg-color);
 }
 
 header {
@@ -32,14 +41,14 @@ header {
   width: 100%;
   min-width: 300px;
   top: 0px;
-  background-color: #f2f2f2;
+  background-color: var(--main-bg-color);
 
   .header-content {
     width: min(100% - 40px, 1080px);
     margin: 0 auto;
 
     a {
-      color: #000;
+      color: var(--text-color-dark);
     }
   }
 
@@ -50,9 +59,9 @@ header {
 
   .header-nav {
     clear: both;
-    background-color: #fff;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    background-color: var(--content-bg-color);
+    border-top: 1px solid var(--border-color-light);
+    border-bottom: 1px solid var(--border-color-light);
     padding: 10px;
   }
 
@@ -64,19 +73,19 @@ header {
     clear: both;
 
     a {
-      color: #000;
+      color: var(--text-color-dark);
       text-decoration: none;
       padding: 10px;
 
       &:hover {
-        background-color: #f2f2f2;
+        background-color: var(--hover-color);
       }
     }
   }
 }
 
 main {
-  background-color: #fff;
+  background-color: var(--content-bg-color);
   /* set main's min-height to viewport height - header height - footer height */
   min-height: calc(100vh - 155px);
   width: min(100% - 40px, 1080px);
@@ -84,7 +93,7 @@ main {
   padding: 110px 10px 0;
 
   article {
-    background-color: #fff;
+    background-color: var(--content-bg-color);
   }
 }
 
@@ -134,9 +143,9 @@ h2.title {
     aspect-ratio: 18 / 21;
     padding: 15px;
     float: left;
-    background-color: #fff;
-    color: #000;
-    border-bottom: 1px solid #d9d9d9;
+    background-color: var(--content-bg-color);
+    color: var(--text-color-dark);
+    border-bottom: 1px solid var(--border-color-light);
 
     @media (width <1120px) {
       width: 25%;
@@ -157,7 +166,7 @@ h2.title {
     }
 
     &:hover {
-      background-color: #f2f2f2;
+      background-color: var(--hover-color);
 
     }
 
@@ -271,7 +280,7 @@ h2.title {
 
 footer {
   background-color: #666;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border-color-light);
   height: 155px;
   width: 100%;
   min-width: 300px;
@@ -285,7 +294,7 @@ footer {
 
   a,
   p {
-    color: #fff;
+    color: var(--text-color-light);
   }
 
   .logo {
@@ -293,6 +302,6 @@ footer {
   }
 
   .copyright {
-    color: #fff;
+    color: var(--text-color-light)
   }
 }
