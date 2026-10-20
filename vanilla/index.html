@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Företaget Gurkans webbshop">
+  <meta name="keywords" content="webbshop, e-shop, webshop">
+  <meta name="author" content="Gustav Sulingga Wahrberg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gurkans webbshop</title>
   <link rel="stylesheet" href="style.css">
@@ -596,9 +599,9 @@
     <article id="kassa">
       <div class="content">
         <h2 class="title">Kassan</h2>
-        <form>
+        <form class="check-out" autocomplete="on">
           <fieldset>
-            <legend>Leveransuppgifter</legend>
+            <legend>Kundinformation</legend>
             <div class="form-item">
               <label for="firstName">Förnamn:</label>
               <input type="text" name="firstName" id="firstName" required>
@@ -613,30 +616,30 @@
             </div>
             <div class="form-item short">
               <label for="postalCode">Postnummer:</label>
-              <input type="text" name="postalCode" id="postalCode" required>
+              <input type="text" name="postalCode" id="postalCode" placeholder="123 47" required pattern="^\d{3}\s?\d{2}$">
             </div>
             <div class="form-item long">
-              <label for="PostalArea">Ort:</label>
+              <label for="PostalArea">Postort:</label>
               <input type="text" name="PostalArea" id="PostalArea" required>
             </div>
             <div class="form-item full">
               <label for="email">E-post:</label>
-              <input type="email" name="email" id="email" placeholder="example@email.com" required>
+              <input type="email" name="email" id="email" placeholder="exempel@epost.com" required>
             </div>
             <div class="form-item short">
               <label for="shipping">Fraktalternativ:</label>
-              <select name="shipping" id="shipping" size="2" required>
+              <select name="shipping" id="shipping" size="3" required>
                 <option>PostNord</option>
                 <option>DHL</option>
-                <option>Schenker</option>
+                <option>DSV (Schenker)</option>
               </select>
             </div>
             <div class="form-item long">
-              <label for="comments">Frågor/kommentarer:</label>
+              <label for="comments">Meddelande: (valfritt)</label>
               <textarea name="comments" id="comments"></textarea>
             </div>
             <div class="form-item clear">
-              <button type="submit">Avsluta köpet</button>
+              <button type="submit">Slutför köp</button>
             </div>
           </fieldset>
         </form>

@@ -181,3 +181,10 @@ select {
     font-size: initial;
   }
 }
+
+input,
+select {
+  &:user-invalid {
+    @extend .is-invalid;
+  }
+}

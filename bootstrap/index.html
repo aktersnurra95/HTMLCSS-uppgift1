@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Företaget Gurkans webbshop">
+  <meta name="keywords" content="webbshop, e-shop, webshop">
+  <meta name="author" content="Gustav Sulingga Wahrberg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gurkans webbshop</title>
   <link rel="stylesheet" href="style.css">
@@ -821,12 +824,12 @@
             </div>
             <div class="input-group mb-3">
               <div class="form-floating">
-                <input type="text" name="postalCode" id="postalCode" class="form-control" placeholder="Postkod" required>
+                <input type="text" name="postalCode" id="postalCode" class="form-control" placeholder="Postkod" required pattern="^\d{3}\s?\d{2}$">
                 <label for="postalCode">Postnummer</label>
               </div>
               <div class="form-floating">
-                <input type="text" name="postalArea" id="postalArea" class="form-control" placeholder="Ort" required>
-                <label for="postalArea">Ort</label>
+                <input type="text" name="postalArea" id="postalArea" class="form-control" placeholder="Postort" required>
+                <label for="postalArea">Postort</label>
               </div>
             </div>
             <div class="form-floating mb-3">
@@ -836,14 +839,14 @@
             <div class="input-group mb-3">
               <select name="shipping" class="form-select" id="shipping" multiple required>
                 <optgroup label="Fraktalternativ">
-                  <option selected>PostNord</option>
+                  <option>PostNord</option>
                   <option>DHL</option>
                   <option>DSV (Schenker)</option>
                 </optgroup>
               </select>
               <div class="form-floating">
-                <textarea name="comments" id="comments" class="form-control" placeholder="Frågor/kommentarer" style="min-height: 100px;"></textarea>
-                <label for="comments">Frågor/kommentarer</label>
+                <textarea name="comments" id="comments" class="form-control" placeholder="Meddelande" style="min-height: 110px;"></textarea>
+                <label for="comments">Meddelande (valfritt)</label>
               </div>
             </div>
             <button type="submit" class="btn btn-light border-secondary-subtle">Avsluta köpet</button>
@@ -860,7 +863,7 @@
       <a href="index.html">
         <img src="images/logo-inverted.png" class="m-2" height="60" alt="Gurkans webbshop logga">
       </a>
-      <p class="text-secondary-emphasis mb-2">Copyright &copy; 2026 Gurkan AB</p>
+      <p class="text-white mb-2">Copyright &copy; 2026 Gurkan AB</p>
     </div>
   </footer>
 
