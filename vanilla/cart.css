@@ -4,13 +4,13 @@
   display: block;
   padding: 8px 8px 5px 5px;
   margin: 17px 15px 15px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border-color-light);
   border-radius: 2px;
-  background-color: #fff;
+  background-color: var(--content-bg-color);
   cursor: pointer;
 
   &:hover {
-    background-color: #f2f2f2;
+    background-color: var(--hover-color);
   }
 
   img {
@@ -78,7 +78,7 @@
   clear: both;
   padding: 20px;
   border: 1px solid #000;
-  background-color: #fff;
+  background-color: var(--content-bg-color);
 
   h2 {
     margin-top: 0px;
