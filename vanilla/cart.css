@@ -131,7 +131,7 @@
       input {
         text-align: center;
         field-sizing: content;
-        min-width: 30px;
+        min-width: 35px;
 
         &::-webkit-inner-spin-button {
           opacity: 1;

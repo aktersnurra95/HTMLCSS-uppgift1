@@ -239,14 +239,14 @@ h2.title {
 
   label {
     display: block;
-    margin-bottom: 2px;
+    margin: 2px;
   }
 
   input,
   select,
   textarea {
     width: 100%;
-    padding: 2px;
+    padding: 5px;
     border: solid 1px #767676;
     border-radius: 2px;
 
@@ -261,10 +261,8 @@ h2.title {
 
   select,
   textarea {
-    height: 66px;
+    height: 75px;
   }
-
-
 
   &:nth-last-of-type(1) {
     margin-top: 8px;
