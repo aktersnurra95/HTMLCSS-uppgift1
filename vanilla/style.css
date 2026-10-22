@@ -165,8 +165,11 @@ h2.title {
     }
 
     @media (width <576px) {
-      width: 100%;
-      aspect-ratio: 18 / 19;
+      aspect-ratio: 18 / 21;
+    }
+
+    @media (width <480px) {
+      aspect-ratio: 18 / 22;
     }
 
     &:hover {
@@ -186,8 +189,9 @@ h2.title {
     }
 
     p {
-      margin: 3px 10px -1em;
+      margin: 3px 0 -1em;
       float: right;
+      white-space: nowrap;
     }
   }
 }
