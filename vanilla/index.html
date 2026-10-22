@@ -16,9 +16,11 @@
   <!--HEADER, NAVIGATION AND CART BUTTON-->
   <header>
     <div class="header-content">
-      <a href="index.html">
-        <img src="images/logo.png" class="logo" alt="Gurkans webbshop logga">
-      </a>
+      <h1>
+        <a href="index.html">
+          <img src="images/logo.png" class="logo" alt="Gurkans webbshop">
+        </a>
+      </h1>
       <label class="cart-button" for="cart-control"><img src="images/cart.png" alt="Varukorg"></label>
     </div>
     <div class="header-nav">
@@ -32,7 +34,7 @@
 
   <!--CART PANEL-->
   <aside>
-    <input type="checkbox" id="cart-control">
+    <input type="checkbox" id="cart-control" aria-label="Öppna/stäng varukorgen">
     <div class="cart-background">
       <label class="cart-background-button" for="cart-control"></label>
     </div>
@@ -76,7 +78,7 @@
     <!--PRODUCTS-->
     <article id="produkter">
       <div class="content">
-        <h2 class="title">Produkter</h2>
+        <h2 class="title">Våra produkter</h2>
         <div class="product-container">
 
           <a href="#produkter/apa">
@@ -209,7 +211,7 @@
     <article id="produkter/apa" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/apa.jpg" alt="Apa">
+        <img src="images/apa.jpg" alt="">
         <h2>Apa</h2>
         <p class="product-price"></p>
         <form data-label="Apa" data-price="1500">
@@ -218,7 +220,7 @@
         <p>Ett djur som gillar att äta bananer.</p>
         <p>Denna mångsidiga och energifyllda följeslagare är byggd för både äventyr och avkoppling. Med sitt mjuka uttryck och sin naturliga nyfikenhet förvandlar apan varje vardagsstund till en underhållande upplevelse.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Akrobatisk precision:</strong> Utrustad med en fullt flexibel svans och greppvänliga händer, perfekta för klättring, balansgång och snabba manövrar i hemmamiljön.</li>
             <li><strong>Hög kognitiv kapacitet:</strong> Älskar problemlösning! Utmärkt på att klura ut gömställen, öppna kluriga förpackningar och lära sig nya bus.</li>
@@ -241,7 +243,7 @@
     <article id="produkter/banan" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/banan.jpg" alt="Banan">
+        <img src="images/banan.jpg" alt="">
         <h2>Banan</h2>
         <form data-label="Banan" data-price="20">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 20 kr</label>
@@ -249,7 +251,7 @@
         <p>En gul avlång frukt som apor tycker om.</p>
         <p>Oavsett om du behöver ett snabbt mellanmål i farten, ett energitillskott före träningen eller en ingrediens som lyfter din smoothie till nya höjder, levererar denna böjda klassiker alltid högsta kvalitet.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Ergonomisk & Bärbar:</strong> Levereras i ett helt naturligt, biologiskt nedbrytbart skyddsskal som gör den lätt att ta med sig utan krångel.</li>
             <li><strong>Omedelbar Energikick:</strong> Rik på kolhydrater och naturliga sockerarter som ger dig snabb och långvarig energi när du behöver den som mest.</li>
@@ -273,7 +275,7 @@
     <article id="produkter/citron" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/citron.jpg" alt="Citron">
+        <img src="images/citron.jpg" alt="">
         <h2>Citron</h2>
         <form data-label="Citron" data-price="10">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 10 kr</label>
@@ -281,7 +283,7 @@
         <p>En gul rund frukt som är ganska sur.</p>
         <p>Oavsett om du vill förhöja smaken på en god maträtt, pressa fräsch juice, baka syrliga desserter eller ge ditt dricksvatten en naturlig fräschör, levererar denna mångsidiga frukt maximal fräschör i varje droppe.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Intensiv Smaksättare:</strong> Ger en perfekt balans av syra och fräschör till allt från salladsdressingar och marinader till fiskrätter och bakverk.</li>
             <li><strong>C-Vitaminboost:</strong> Packad med naturligt C-vitamin och antioxidanter som stöttar immunförsvaret och ger dig en frisk start på dagen.</li>
@@ -305,7 +307,7 @@
     <article id="produkter/dammsugare" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/dammsugare.jpg" alt="Dammsugare">
+        <img src="images/dammsugare.jpg" alt="">
         <h2>Dammsugare</h2>
         <form data-label="Dammsugare" data-price="900">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 900 kr</label>
@@ -313,7 +315,7 @@
         <p>En maskin som suger damm.</p>
         <p>Oavsett om du behöver städa djupa mattor, känsliga trägolv eller svåråtkomliga hörn, anpassar sig UltraClean smidigt efter dina behov och lämnar ditt hem fräscht och rent.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Maximal Sugkraft:</strong> Avancerad motorteknik som effektivt fångar upp allt från mikroskopiska dammpartiklar till grövre smuts.</li>
             <li><strong>HEPA-filtrering:</strong> Inbyggt högeffektivt filter som fångar upp 99,9 % av allergener och damm, vilket ger en renare och friskare inomhusluft.</li>
@@ -337,7 +339,7 @@
     <article id="produkter/ek" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/ek.jpg" alt="Ek">
+        <img src="images/ek.jpg" alt="">
         <h2>Ek</h2>
         <form data-label="Ek" data-price="1120">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 1 120 kr</label>
@@ -345,7 +347,7 @@
         <p>Ett stort träd med löv och ekollon.</p>
         <p>Oavsett om den står som en stolt solitär i parken eller skapar ett prunkande ekosystem för hundratals arter, erbjuder detta ädla trädtillskott enastående hållbarhet, skugga och naturlig skönhet över generationer.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Oslagbar Hållbarhet:</strong> Ett extremt robust och starkt trädslag som står emot hårt väder och kan leva i flera hundra år.</li>
             <li><strong>Ekosystemets Hjälte:</strong> Fungerar som ett levande hem och matkälla för ett rikt djurliv, inklusive fåglar, ekorrar och värdefulla insekter.</li>
@@ -369,7 +371,7 @@
     <article id="produkter/fisk" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/fisk.jpg" alt="Fisk">
+        <img src="images/fisk.jpg" alt="">
         <h2>Fisk</h2>
         <form data-label="Fisk" data-price="300">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 300 kr</label>
@@ -377,7 +379,7 @@
         <p>En sladdrig sak som flyter i vattnet.</p>
         <p>Denna simmande skönhet tillför liv och färg till varje vattenmiljö. Med sina smidiga rörelser och glänsande fjäll skapar den en avkopplande atmosfär som sprider ro i hela rummet.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Hydrodynamisk Precision:</strong> Utrustad med strömlinjeformad kropp och perfekta fenor för tyst och smidig navigering i alla vattendrag.</li>
             <li><strong>Harmonisk Närvaro:</strong> Verkar avslappnande och stressreducerande att betrakta när den glider fram i sin naturliga rytm.</li>
@@ -401,7 +403,7 @@
     <article id="produkter/gustav" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/gustav.jpg" alt="Gustav">
+        <img src="images/gustav.jpg" alt="">
         <h2>Gustav</h2>
         <form data-label="Gustav" data-price="951106">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 951106 kr</label>
@@ -409,7 +411,7 @@
         <p>En grabb med två ben och armar.</p>
         <p>Med en imponerande känsla för detaljer, tydliga instruktioner och ett öga för stilren kodstyrning förvandlar du enkla idéskisser till perfekt strukturerade leveranser.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Skarp Kravställning:</strong> Mästare på att formulera exakta direktiv - från strukturella HTML-taggar till strikt formatkontroll utan blankrader.</li>
             <li><strong>Kreativ Vision:</strong> Driven av en bred idébredd som sträcker sig från akrobatiska apor och saftiga citroner till majestätiska ekar och simmande fiskar.</li>
@@ -433,7 +435,7 @@
     <article id="produkter/helikopter" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/helikopter.jpg" alt="Helikopter">
+        <img src="images/helikopter.jpg" alt="">
         <h2>Helikopter</h2>
         <form data-label="Helikopter" data-price="180000">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 180 000 kr</label>
@@ -441,7 +443,7 @@
         <p>Ett tungt fordon med en fläkt på taket.</p>
         <p>Oavsett om det handlar om snabba transporter över svårtillgänglig terräng, spektakulära utsiktsfärder eller ett effektivt arbetsredskap i luften, levererar denna helikopter maximal prestanda, stabilitet och precision under alla flygförhållanden.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Vertikal Start & Landning (VTOL):</strong> Starta och landa med millimeterprecision på såväl små ytor som öppna fält och byggnadstak.</li>
             <li><strong>Avancerad Rotor- & Gyrostabilisering:</strong> Inbyggt aerodynamiskt stödsystem som ger en mjuk, stadig och kontrollerad flygning även i utmanande vindförhållanden.</li>
@@ -466,7 +468,7 @@
     <article id="produkter/isbit" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/isbit.jpg" alt="Isbitar">
+        <img src="images/isbit.jpg" alt="">
         <h2>Isbit (1st)</h2>
         <form data-label="Isbit" data-price="1">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 1 kr</label>
@@ -474,7 +476,7 @@
         <p>En kall kub gjord av vatten.</p>
         <p>Oavsett om du vill kyla ner en varm sommardag, ge lyxkänsla åt din favoritdryck eller skapa en harmonisk kyleffekt i glaset, levererar denna perfekta kub maximal kyla med minimalistisk stil.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Kristallklar Klarhet:</strong> Tillverkad genom en kontrollerad frysprocess som minimerar luftbubblor för en genomskinlig och stilren finish.</li>
             <li><strong>Omedelbar Temperatursänkning:</strong> Snabb och effektiv värmeabsorption som sänker dryckens temperatur på bara några sekunder.</li>
@@ -499,7 +501,7 @@
     <article id="produkter/jojo" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/jojo.jpg" alt="Jojo">
+        <img src="images/jojo.jpg" alt="">
         <h2>Jojo</h2>
         <form data-label="Jojo" data-price="260">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 260 kr</label>
@@ -507,7 +509,7 @@
         <p>En leksak som hänger från fingret.</p>
         <p>Oavsett om du vill lära dig grundläggande snurr eller imponera på omgivningen med avancerade akrobatiska manövrar som ”Gå med hunden” och ”Vaggan”, levererar detta balanserade underverk en perfekt rytm varje gång du släpper snöret.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Precisionstrimmad Kärna:</strong> Utrustad med ett smidigt kullager som ger långa, stabila spinntider för maximal kontroll under trixande.</li>
             <li><strong>Perfekt Viktfördelning:</strong> Aerodynamisk skivdesign med tyngdpunkten i ytterkanterna för extra balans och mjuka returer.</li>
@@ -531,7 +533,7 @@
     <article id="produkter/kanelbulle" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/kanelbulle.jpg" alt="Kanelbulle">
+        <img src="images/kanelbulle.jpg" alt="">
         <h2>Kanelbulle</h2>
         <form data-label="Kanelbulle" data-price="36">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> · 36 kr</label>
@@ -539,7 +541,7 @@
         <p>Ett gott fikabröd med kanel och socker.</p>
         <p>Med sin perfekt snurrade form, rikliga fyllning av äkta kanel och smör samt en krona av glänsande pärlsocker levererar denna gyllenbruna bakverksikon en doft- och smakupplevelse som väcker varma minnen till liv.</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Smörig &amp; Luftig Deg:</strong> Långsamt jäst vetedeg smaksatt med nystött kardemumma för maximal saftighet och konsistens.</li>
             <li><strong>Aromatisk Fyllning:</strong> Fylld till brädden med en harmonisk balans av äkta kanel, krämigt smör och finstämd sötma.</li>
@@ -563,7 +565,7 @@
     <article id="produkter/lorem" class="product-page">
       <a href="#produkter" class="return-link">← tillbaka</a>
       <div class="content">
-        <img src="images/lorem.png" alt="Lorem">
+        <img src="images/lorem.png" alt="">
         <h2>Lorem</h2>
         <form data-label="Lorem" data-price="1234567890">
           <label><input name="quantity" type="number" value="0" min="0" max="99"> ·
@@ -572,7 +574,7 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <p>Cupiditate deleniti dolor quos voluptates laborum cum illum repellat! Impedit laudantium minima sequi cumque voluptatum, beatae, animi dolor nesciunt ut aliquid voluptatibus?</p>
         <section>
-          <h3>Nyckelegenskaper</h3>
+          <h3>Egenskaper</h3>
           <ul>
             <li><strong>Odit dolores quibusdam doloremque enim nam:</strong> Exercitationem eligendi praesentium soluta, rem expedita quibusdam quidem? Accusantium perspiciatis consequuntur, porro voluptatibus distinctio incidunt voluptates velit maxime cum numquam, nihil quas error consectetur quod amet nam sapiente dolore quos.</li>
             <li><strong>Rem eligendi blanditiis facilis enim possimus eius qui:</strong> Nisi, vel. Deserunt voluptates, modi iure reprehenderit pariatur voluptatibus delectus nobis molestias, debitis porro hic laudantium incidunt accusantium ipsam. Perferendis harum esse numquam, ipsam hic praesentium assumenda, nisi sit corrupti, facere quidem.</li>
@@ -613,7 +615,7 @@
             </div>
             <div class="form-item short">
               <label for="postalCode">Postnummer:</label>
-              <input type="text" name="postalCode" id="postalCode" placeholder="123 47" required pattern="^\d{3}\s?\d{2}$">
+              <input type="text" name="postalCode" id="postalCode" required pattern="^\d{3}\s?\d{2}$" title="Fem siffror, med eller utan mellanslag. Ex. 12345 eller 123 45">
             </div>
             <div class="form-item long">
               <label for="PostalArea">Postort:</label>

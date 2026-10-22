@@ -55,7 +55,7 @@ html {
 }
 
 header nav a:hover {
-  background-color: #f2f2f2;
+  background-color: $secondary-bg-subtle;
 }
 
 main {
@@ -135,7 +135,7 @@ main {
   left: 20px;
   text-decoration: none;
   font-size: small;
-  color: #666;
+  color: $secondary;
 
   &:hover {
     text-decoration: underline;
@@ -154,7 +154,7 @@ main {
   }
 
   .product:hover {
-    background-color: #f2f2f2;
+    background-color: $secondary-bg-subtle;
   }
 }
 

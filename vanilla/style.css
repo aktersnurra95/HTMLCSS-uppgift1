@@ -47,6 +47,10 @@ header {
     width: min(100% - 40px, 1080px);
     margin: 0 auto;
 
+    h1 {
+      margin: 0;
+    }
+
     a {
       color: var(--text-color-dark);
     }
