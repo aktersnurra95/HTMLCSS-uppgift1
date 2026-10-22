@@ -16,10 +16,12 @@
   <!--HEADER, NAVIGATION AND CART BUTTON-->
   <header class="fixed-top bg-white border-bottom shadow-sm bg-body-secondary">
     <div class="header-content container-md d-flex justify-content-between align-items-center py-0">
-      <a href="index.html" class="navbar-brand">
-        <img src="images/logo.png" class="logo my-1" height="70" alt="Gurkans webbshop logga">
-      </a>
-      <button class="cart-btn btn btn-light border-secondary-subtle" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><img src="images/cart.png" height="30" alt="Varukorg"></button>
+      <h1 class="m-0">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.png" class="logo my-1" height="70" alt="Gurkans webbshop logga">
+        </a>
+      </h1>
+      <button class="cart-btn btn btn-light border-secondary-subtle" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><img src="images/cart.png" height="30" alt="Varukorg" aria-label="Visa/dölj varukorgen"></button>
     </div>
     <div class="header-nav bg-white border-top">
       <nav class="header-content container-md d-flex justify-content-start align-items-center">
@@ -75,6 +77,7 @@
     <!--PRODUCTS-->
     <article id="produkter">
       <div class="content p-5">
+        <h2 class="">Våra Produkter</h2>
         <div class="product-container row g-0 gy-2 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5">
 
           <a href="#produkter/apa" class="col">
@@ -187,7 +190,7 @@
         <section>
           <h3>Vår Vision & Filosofi</h3>
           <p>Vi tror inte på massproduktion utan eftertanke eller ett enformigt hem. Vår filosofi vilar på tre grundpelare som styr allt vi gör:</p>
-          <ul>
+          <ul class="list-unstyled">
             <li><strong>Kvalitet & Funktion:</strong> Oavsett om det handlar om avancerad hushållsteknik eller naturliga råvaror ska varje produkt leverera över förväntan och hålla vad den lovar.</li>
             <li><strong>Mångfald & Karaktär:</strong> Vi hyllar det unika. Vi vill erbjuda ett sortiment som överraskar, inspirerar och tillför en personlig touch till din miljö.</li>
             <li><strong>Hållbarhet i Fokus:</strong> Vi värnar om både naturen och långsiktiga värden. Vi prioriterar biologiska material, energieffektiva lösningar och produkter som står sig över tid.</li>
@@ -837,7 +840,7 @@
               <label for="email">E-post</label>
             </div>
             <div class="input-group mb-3">
-              <select name="shipping" class="form-select" id="shipping" multiple required>
+              <select name="shipping" class="form-select" id="shipping" multiple required aria-label="Fraktalternativ">
                 <optgroup label="Fraktalternativ">
                   <option>PostNord</option>
                   <option>DHL</option>

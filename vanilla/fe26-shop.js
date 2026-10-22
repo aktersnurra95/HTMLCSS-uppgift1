@@ -13,16 +13,22 @@ const esc = s => String(s).replace(/[&<>"]/g, c => `&#${c.charCodeAt(0)};`);
 // A product is a form with data-label and data-price + an input named quantity:
 //   <form data-label="Duck" data-price="50"> <input name="quantity" ...> </form>
 // data-id is optional, only needed if two products share the same label
+// The same product may appear in several forms (product list + detail page):
+// they share an id and are kept in sync, so the cart only gets one row per id
 const productForms = () => [...document.forms].filter(form => 'price' in form.dataset);
 const productId = form => form.dataset.id || form.dataset.label;
 
 function getCart(restore) {
+  const seen = new Set();
   const rows = productForms().map(form => {
     const id = productId(form);
     const input = form.elements.quantity;
     if (restore && input) {
       input.value = restore.rows.find(x => x.id === id)?.quantity || 0;
     }
+    // a second form for the same product: already counted
+    if (seen.has(id)) { return { quantity: 0 }; }
+    seen.add(id);
     const label = form.dataset.label || id;
     // accept both 49.90 and 49,90
     const price = parseFloat(form.dataset.price.replace(',', '.')) || 0;
@@ -86,9 +92,10 @@ function renderCart(keep, restore) {
 }
 
 // The product forms are the source of truth, so changing a quantity
-// means changing it there (id omitted = all products)
-function setQuantity(id, value) {
+// means changing it there (id omitted = all products, skip = a form to leave alone)
+function setQuantity(id, value, skip) {
   for (const form of productForms()) {
+    if (form === skip) { continue; }
     if (id !== undefined && productId(form) !== id) { continue; }
     if (form.elements.quantity) { form.elements.quantity.value = value; }
   }
@@ -100,9 +107,11 @@ document.body.addEventListener('submit', e => e.preventDefault());
 document.body.addEventListener('input', ({ target }) => {
   if (!target.matches('input[name="quantity"]')) { return; }
   const inCart = target.closest('.cart');
-  // typing in the cart: copy the value to the product form, the source of truth
+  // typing in the cart: copy the value to the product forms, the source of truth
   if (inCart) { setQuantity(target.dataset.id, target.value); }
   else if (!productForms().includes(target.form)) { return; }
+  // typing in a product form: copy the value to other forms for the same product
+  else { setQuantity(productId(target.form), target.value, target.form); }
   renderCart(inCart && target);
 });
 
